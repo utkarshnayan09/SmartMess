@@ -38,7 +38,7 @@ By giving students real-time queue information and giving administrators better 
 
 We plan to add features such as AI-based crowd prediction, peak-hour analysis, digital tokens, queue notifications, and food demand prediction.
 
-## Team
+## Team AALU
 
 **Team 404NOTFOUND**
 
