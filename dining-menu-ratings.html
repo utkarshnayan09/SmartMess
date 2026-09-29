@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+
+<html class="h-auto min-h-screen" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#faf8ff;-webkit-overflow-scrolling:touch;touch-action:pan-y;}body{min-height:100vh;height:auto;overflow-y:auto;overflow-x:hidden;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'outline-variant': '#bcc9c6', 'on-secondary-fixed-variant': '#005137', 'outline': '#6d7a77', 'on-background': '#131b2e', 'secondary-fixed-dim': '#68dba9', 'surface-variant': '#dae2fd', 'inverse-primary': '#6bd8cb', 'primary-fixed': '#89f5e7', 'secondary': '#006c4a', 'on-secondary-fixed': '#002114', 'surface-container-low': '#f2f3ff', 'secondary-fixed': '#85f8c4', 'secondary-container': '#82f5c1', 'tertiary-fixed-dim': '#ffb95f', 'on-surface': '#131b2e', 'surface-container-highest': '#dae2fd', 'tertiary-container': '#a36700', 'tertiary': '#825100', 'surface': '#faf8ff', 'inverse-on-surface': '#eef0ff', 'surface-container-lowest': '#ffffff', 'surface-bright': '#faf8ff', 'surface-container': '#eaedff', 'surface-dim': '#d2d9f4', 'primary-container': '#008378', 'on-error': '#ffffff', 'on-surface-variant': '#3d4947', 'on-error-container': '#93000a', 'on-primary': '#ffffff', 'background': '#faf8ff', 'on-secondary-container': '#00714e', 'primary-fixed-dim': '#6bd8cb', 'error-container': '#ffdad6', 'on-primary-fixed-variant': '#005049', 'surface-container-high': '#e2e7ff', 'on-tertiary': '#ffffff', 'on-tertiary-fixed': '#2a1700', 'primary': '#00685f', 'on-tertiary-container': '#fffbff', 'tertiary-fixed': '#ffddb8', 'on-primary-container': '#f4fffc', 'inverse-surface': '#283044', 'on-tertiary-fixed-variant': '#653e00', 'surface-tint': '#006a61', 'error': '#ba1a1a', 'on-secondary': '#ffffff', 'on-primary-fixed': '#00201d' }, borderRadius: { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, spacing: { 'space-xs': '0.25rem', 'space-md': '1rem', 'gutter-tablet': '1.25rem', 'space-lg': '1.5rem', 'margin-tablet': '1.5rem', 'space-xl': '2rem', 'gutter': '1rem', 'gutter-desktop': '1.5rem', 'space-sm': '0.5rem', 'margin': '1rem', 'margin-desktop': '2.5rem' }, fontFamily: { 'body-md': ['Plus Jakarta Sans'], 'display-lg': ['Plus Jakarta Sans'], 'label-md': ['Plus Jakarta Sans'], 'headline-xl': ['Plus Jakarta Sans'], 'label-sm': ['Plus Jakarta Sans'], 'body-lg': ['Plus Jakarta Sans'], 'body-sm': ['Plus Jakarta Sans'], 'headline-lg-mobile': ['Plus Jakarta Sans'], 'label-lg': ['Plus Jakarta Sans'], 'headline-lg': ['Plus Jakarta Sans'], 'title-md': ['Plus Jakarta Sans'] }, fontSize: { 'body-md': ['14px', { lineHeight: '20px', letterSpacing: '0em', fontWeight: '400' }], 'display-lg': ['40px', { lineHeight: '48px', letterSpacing: '-0.03em', fontWeight: '800' }], 'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0.02em', fontWeight: '600' }], 'headline-xl': ['32px', { lineHeight: '40px', letterSpacing: '-0.025em', fontWeight: '700' }], 'label-sm': ['10px', { lineHeight: '14px', letterSpacing: '0.04em', fontWeight: '700' }], 'body-lg': ['16px', { lineHeight: '24px', letterSpacing: '0em', fontWeight: '400' }], 'body-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.01em', fontWeight: '400' }], 'headline-lg-mobile': ['20px', { lineHeight: '28px', letterSpacing: '-0.015em', fontWeight: '700' }], 'label-lg': ['14px', { lineHeight: '18px', letterSpacing: '0.01em', fontWeight: '600' }], 'headline-lg': ['24px', { lineHeight: '32px', letterSpacing: '-0.02em', fontWeight: '700' }], 'title-md': ['18px', { lineHeight: '24px', letterSpacing: '-0.01em', fontWeight: '600' }] } } } }</script></head><body class="bg-background font-body-md text-on-surface antialiased flex flex-col min-h-screen overflow-y-auto overflow-x-hidden h-auto touch-pan-y"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter flex items-center justify-between gap-space-sm max-w-2xl mx-auto"><div class="flex items-center gap-space-xs min-w-0 flex-1"><button onclick="window.location.href='student-dashboard.html'" class="w-9 h-9 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container active:scale-95 transition-all cursor-pointer mr-1" aria-label="Back to Dashboard"><span class="material-symbols-outlined text-[20px]">arrow_back</span></button><img alt="SmartMess Brand Logo" class="h-8 w-auto object-contain flex-shrink-0 cursor-pointer" onclick="window.location.href='student-dashboard.html'" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJchqQzWw_3HFe5_So0ytjoL5bkm9xmolQOvjRt-InirpsPCFUmcZC8KqvJzzuTuaWl-ws3R57t_jCtWw11rLZ5NHouTiBmMu5JjsRxx4YvzTB2Fx4IHLkn_290ZM6vCOIVaITkEmlX8QjmVFaKhLi0ZrrbogPdfs-Aiygjnq0AiApYmllfE1qrw4lMUqGyyK26or9kDcUR3-g2uADmPFpaRAo-3_o-v7pJ5GAUneN1TdJCG_rgVcD"/><div class="flex flex-col min-w-0 cursor-pointer" onclick="window.location.href='student-dashboard.html'"><span class="font-label-sm text-label-sm text-primary uppercase tracking-wider leading-none">SmartMess</span><span class="font-title-md text-title-md text-on-surface truncate leading-tight">Dining Menu</span></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed shadow-[0_0_12px_rgba(245,158,11,0.25)]"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-container animate-pulse"></span><span class="font-label-sm text-label-sm uppercase tracking-wide">49% Moderate</span></div><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface"></span></button><div class="w-11 h-11 flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABB43DNrDcn0k4XImqtFDgCkemDToE5ry5NDjme949CMZ86Q5DWwpcOcPb98PEx7USmw-s-mXs5GycS0JO7lk5__Fbg6g9g3deOT9OAcmeVXVmzJoEaG46TrY1IqinvI3igMs-1-Hcih48ziWibiUiUwxcJ_5v314f9pbfOJYlsNuypEg1pFvrhsxiulXwMheMAMKL8JjShoeNleaV15imKUERHi568NnscwfXtwCIbXd538UOyVJC"/></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-32 bg-surface min-h-screen"><div class="flex flex-col w-full max-w-2xl mx-auto">
+<div class="px-margin space-y-space-md pt-space-xs pb-space-lg">
+<!-- Hero / Title Overview -->
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Campus Dining Menu</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">Live Kitchen</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Daily specials, ratings, and student taste feedback</p>
+</div>
+<!-- Monthly Menu Voting Banner -->
+<div class="relative overflow-hidden rounded-xl bg-tertiary-fixed text-on-tertiary-fixed p-space-md shadow-sm" id="monthly-voting-banner">
+<div class="flex flex-col gap-space-sm relative z-10">
+<div class="flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tertiary text-[20px]" style="font-variation-settings: 'FILL' 1;">ballot</span>
+<span class="font-title-md text-title-md font-bold text-on-tertiary-fixed">Shape Next Month's Menu</span>
+</div>
+<span class="text-xs font-semibold px-2 py-0.5 rounded-full bg-white/60 text-on-tertiary-fixed"><span id="total-votes-count">1,248</span> votes</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-tertiary-fixed-variant" id="vote-summary-text">Top choices: Masala Dosa (<span id="dosa-count">382</span>), Pizza (<span id="pizza-count">291</span>)</p>
+<!-- Voting Poll Items -->
+<div class="grid grid-cols-2 gap-2 pt-1">
+<div class="bg-surface-container-lowest/80 backdrop-blur-sm rounded-lg p-2.5 flex flex-col justify-between gap-2 shadow-xs border border-tertiary/10">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">Masala Dosa</span>
+<span class="text-xs font-bold text-tertiary" id="dosa-badge">382 votes</span>
+</div>
+<button class="monthly-vote-btn w-full py-1.5 px-3 rounded-full bg-tertiary text-on-tertiary font-label-sm text-label-sm flex items-center justify-center gap-1 active:scale-95 transition-all shadow-xs" data-item="dosa" data-voted="false">
+<span>Vote</span>
+<span class="material-symbols-outlined text-[14px]">how_to_vote</span>
+</button>
+</div>
+<div class="bg-surface-container-lowest/80 backdrop-blur-sm rounded-lg p-2.5 flex flex-col justify-between gap-2 shadow-xs border border-tertiary/10">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface font-bold">Paneer Pizza</span>
+<span class="text-xs font-bold text-tertiary" id="pizza-badge">291 votes</span>
+</div>
+<button class="monthly-vote-btn w-full py-1.5 px-3 rounded-full bg-tertiary text-on-tertiary font-label-sm text-label-sm flex items-center justify-center gap-1 active:scale-95 transition-all shadow-xs" data-item="pizza" data-voted="false">
+<span>Vote</span>
+<span class="material-symbols-outlined text-[14px]">how_to_vote</span>
+</button>
+</div>
+</div>
+</div>
+<div class="absolute -right-4 -bottom-6 w-24 h-24 rounded-full bg-tertiary-container/10 pointer-events-none"></div>
+</div>
+<!-- Timeframe Tabs (Segmented Control) -->
+<div class="w-full overflow-x-auto no-scrollbar py-0.5 whitespace-nowrap">
+<div class="flex items-center gap-2 min-w-max p-1 bg-surface-container rounded-full">
+<button class="timeframe-tab active px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-sm transition-all" data-timeframe="today">Today (Active)</button>
+<button class="timeframe-tab px-3.5 py-1.5 rounded-full text-on-surface-variant font-label-md text-label-md hover:text-on-surface transition-all" data-timeframe="tomorrow">Tomorrow</button>
+<button class="timeframe-tab px-3.5 py-1.5 rounded-full text-on-surface-variant font-label-md text-label-md hover:text-on-surface transition-all" data-timeframe="this-week">This Week</button>
+<button class="timeframe-tab px-3.5 py-1.5 rounded-full text-on-surface-variant font-label-md text-label-md hover:text-on-surface transition-all" data-timeframe="next-week">Next Week (Published)</button>
+</div>
+</div>
+<!-- Meal Category Filters (Pill Strip) -->
+<div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1 whitespace-nowrap">
+<button class="meal-filter active px-4 py-1.5 rounded-full bg-primary-container text-on-primary-container font-label-sm text-label-sm uppercase tracking-wider shadow-sm transition-all" data-meal="all">All Items</button>
+<button class="meal-filter px-4 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider hover:bg-surface-variant transition-all" data-meal="breakfast">Breakfast</button>
+<button class="meal-filter px-4 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider hover:bg-surface-variant transition-all" data-meal="lunch">Lunch</button>
+<button class="meal-filter px-4 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider hover:bg-surface-variant transition-all" data-meal="snacks">Snacks</button>
+<button class="meal-filter px-4 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider hover:bg-surface-variant transition-all" data-meal="dinner">Dinner</button>
+</div>
+<!-- Dishes Stream / Menu Cards -->
+<div class="flex flex-col gap-space-md transition-all duration-300" id="menu-cards-container">
+<!-- Card 1: Chicken Curry -->
+<div class="menu-card rounded-xl bg-surface-container-lowest p-space-md shadow-sm transition-all duration-200 hover:shadow-md" data-category="lunch dinner" data-dish="Chicken Curry" data-timeframe="today this-week">
+<div class="flex gap-space-md">
+<div class="relative w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A warm clay bowl filled with rich, aromatic chicken curry simmering in spicy reddish-orange gravy, fresh coriander garnish, steam rising softly in modern hostel cafeteria lighting, natural daylight food photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZXJ54EWslAq2zh_kFRfnUxVvSBEauwprevht3yvTZpQ9V1pKja_ZkWCJu23nNKH7s2eXY2j5vj-JgG5vaIm_YyPZCG-y9mZJbZnc0cE79m2BDxBTwWbjPoshMwWNQw4jgTjKfT2NXwicTO_MRUSH4CKBQ9nLFbmEV_xAA6nP827NpFkF-NIkrQl-51ZSnKHuc1T4HYAJ-xsYMlm20PaZhJfckXhvR9g7Nh2eCD33SnfxcLsS4x43B"/>
+<span class="absolute top-1.5 left-1.5 inline-flex items-center justify-center w-5 h-5 rounded bg-error-container text-on-error-container shadow-sm" title="Non-Vegetarian">
+<span class="material-symbols-outlined text-[14px]">change_history</span>
+</span>
+</div>
+<div class="flex flex-col justify-between flex-1 min-w-0">
+<div>
+<div class="flex items-start justify-between gap-1 flex-wrap">
+<span class="font-title-md text-title-md text-on-surface font-bold break-words">Chicken Curry</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex-shrink-0">Dinner</span>
+</div>
+<div class="flex items-center gap-1.5 mt-0.5 flex-wrap">
+<div class="flex items-center text-tertiary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md font-bold text-on-surface ml-0.5 card-rating-val">4.4</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant card-rating-count">• 327 ratings</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-1 mt-1">
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm">High Protein</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm">Chef Special</span>
+</div>
+</div>
+</div>
+<div class="mt-space-sm pt-space-sm bg-surface-container-low rounded-lg px-space-sm py-2 flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-1 text-on-surface-variant flex-wrap">
+<span class="font-label-sm text-label-sm uppercase flex-shrink-0">Quick Rate:</span>
+<div class="flex items-center gap-0.5 text-surface-dim hover:text-tertiary cursor-pointer inline-star-rating" data-dish="Chicken Curry">
+<button class="hover:scale-125 transition-transform p-0.5" data-star="1" type="button"><span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="hover:scale-125 transition-transform p-0.5" data-star="2" type="button"><span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="hover:scale-125 transition-transform p-0.5" data-star="3" type="button"><span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="hover:scale-125 transition-transform p-0.5" data-star="4" type="button"><span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="hover:scale-125 transition-transform p-0.5" data-star="5" type="button"><span class="material-symbols-outlined text-[18px] text-outline-variant">star</span></button>
+</div>
+</div>
+<button class="rate-dish-trigger px-3 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm uppercase active:scale-95 transition-transform flex items-center gap-1 flex-shrink-0" data-dish="Chicken Curry" data-rating="4">
+<span>Submit Rating</span>
+<span class="material-symbols-outlined text-[14px]">edit_note</span>
+</button>
+</div>
+</div>
+<!-- Card 2: Paneer Butter Masala -->
+<div class="menu-card rounded-xl bg-surface-container-lowest p-space-md shadow-sm transition-all duration-200 hover:shadow-md" data-category="lunch dinner" data-dish="Paneer Butter Masala" data-timeframe="today tomorrow this-week next-week">
+<div class="flex gap-space-md">
+<div class="relative w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A mouth-watering bowl of cottage cheese paneer cubes drenched in silky butter masala gravy, sprinkled with fresh kasuri methi, soft creamy texture under bright kitchen warmth, shot from top-down perspective." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSzd9PDsbtdj8G1KRUOkgmgiVgQayeygTFLMyUr5j6jA8hFzTi4nZr_HCqXiMHtsJI-uFNyQWhq1DEXl9P204dB5WaJbg2TMdLgcVh-TOeHLr3y2kihMyfjTOibmRvEMD-Y1Isg7YvJo-gpf1TjaIjq6DG6FWLly0OFgi3Xh45J7Vyl5NdBpuZOaxakkaGJnrPn71OWv6DVXf0ozJPR93mAf7b5Ll1wrUhm1aYiRvelaMqTdIu3ioD"/>
+<span class="absolute top-1.5 left-1.5 inline-flex items-center justify-center w-5 h-5 rounded bg-secondary-fixed text-on-secondary-fixed shadow-sm" title="Vegetarian">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">circle</span>
+</span>
+</div>
+<div class="flex flex-col justify-between flex-1 min-w-0">
+<div>
+<div class="flex items-start justify-between gap-1 flex-wrap">
+<span class="font-title-md text-title-md text-on-surface font-bold break-words">Paneer Butter Masala</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex-shrink-0">Lunch</span>
+</div>
+<div class="flex items-center gap-1.5 mt-0.5 flex-wrap">
+<div class="flex items-center text-tertiary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md font-bold text-on-surface ml-0.5 card-rating-val">4.6</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant card-rating-count">• 482 ratings</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-1 mt-1">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">Student Favorite</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Mild Spice</span>
+</div>
+</div>
+</div>
+<div class="mt-space-sm pt-space-sm bg-surface-container-low rounded-lg px-space-sm py-2 flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-1 text-on-surface-variant flex-wrap">
+<span class="font-label-sm text-label-sm uppercase flex-shrink-0">Quick Rate:</span>
+<div class="flex items-center gap-0.5 text-surface-dim hover:text-tertiary cursor-pointer inline-star-rating" data-dish="Paneer Butter Masala">
+<button class="hover:scale-125 transition-transform p-0.5" data-star="1" type="button"><span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="hover:scale-125 transition-transform p-0.5" data-star="2" type="button"><span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="hover:scale-125 transition-transform p-0.5" data-star="3" type="button"><span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="hover:scale-125 transition-transform p-0.5" data-star="4" type="button"><span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="hover:scale-125 transition-transform p-0.5" data-star="5" type="button"><span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span></button>
+</div>
+</div>
+<button class="rate-dish-trigger px-3 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm uppercase active:scale-95 transition-transform flex items-center gap-1 flex-shrink-0" data-dish="Paneer Butter Masala" data-rating="5">
+<span>Submit Rating</span>
+<span class="material-symbols-outlined text-[14px]">edit_note</span>
+</button>
+</div>
+</div>
+<!-- Card 3: Dal Tadka & Jeera Rice -->
+<div class="menu-card rounded-xl bg-surface-container-lowest p-space-md shadow-sm transition-all duration-200 hover:shadow-md" data-category="lunch dinner" data-dish="Dal Tadka &amp; Jeera Rice" data-timeframe="today tomorrow this-week">
+<div class="flex gap-space-md">
+<div class="relative w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Traditional yellow dal tadka tempered with red chili and cumin seeds resting alongside aromatic long-grain cumin jeera rice, displayed in hygienic stainless university cafeteria platter, crisp clean lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4jK1YtZOJoi3U6637YWL_VSOT85NhrwMpSAcEzuQ-Y4tp7a3QDEGTMPS83usD64n4pPEyyhPDUxkAx6MsHmYLvGi9XnGqY5KHedXEIpW4FWImJLV6awiHXHh8HgdtPDvYd_VOqUdTRA-XTq198BTOB2yHbTjlpYwN7kP0Kj520uYJV0xlN47zIzp0DXOoOqzoDAOSEuXOfHidRvIyC9I0NKBPfJDxsKa2TXaO_WnJTc8Ofa9ltBXI"/>
+<span class="absolute top-1.5 left-1.5 inline-flex items-center justify-center w-5 h-5 rounded bg-secondary-fixed text-on-secondary-fixed shadow-sm" title="Vegetarian">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">circle</span>
+</span>
+</div>
+<div class="flex flex-col justify-between flex-1 min-w-0">
+<div>
+<div class="flex items-start justify-between gap-1 flex-wrap">
+<span class="font-title-md text-title-md text-on-surface font-bold break-words">Dal Tadka &amp; Jeera Rice</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm flex-shrink-0">Lunch</span>
+</div>
+<div class="flex items-center gap-1.5 mt-0.5 flex-wrap">
+<div class="flex items-center text-tertiary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md font-bold text-on-surface ml-0.5 card-rating-val">4.1</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant card-rating-count">• 210 ratings</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-1 mt-1">
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Daily Comfort</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Gluten-Free</span>
+</div>
+</div>
+</div>
+<div class="mt-space-sm pt-space-sm bg-surface-container-low rounded-lg px-space-sm py-2 flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-1 text-on-surface-variant flex-wrap">
+<span class="font-label-sm text-label-sm uppercase flex-shrink-0">Quick Rate:</span>
+<div class="flex items-center gap-0.5 text-surface-dim hover:text-tertiary cursor-pointer inline-star-rating" data-dish="Dal Tadka &amp; Jeera Rice">
+<button class="hover:scale-125 transition-transform p-0.5" data-star="1" type="button"><span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="hover:scale-125 transition-transform p-0.5" data-star="2" type="button"><span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="hover:scale-125 transition-transform p-0.5" data-star="3" type="button"><span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="hover:scale-125 transition-transform p-0.5" data-star="4" type="button"><span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="hover:scale-125 transition-transform p-0.5" data-star="5" type="button"><span class="material-symbols-outlined text-[18px] text-outline-variant">star</span></button>
+</div>
+</div>
+<button class="rate-dish-trigger px-3 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm uppercase active:scale-95 transition-transform flex items-center gap-1 flex-shrink-0" data-dish="Dal Tadka &amp; Jeera Rice" data-rating="4">
+<span>Submit Rating</span>
+<span class="material-symbols-outlined text-[14px]">edit_note</span>
+</button>
+</div>
+</div>
+<!-- Card 4: Masala Dosa -->
+<div class="menu-card rounded-xl bg-surface-container-lowest p-space-md shadow-sm transition-all duration-200 hover:shadow-md" data-category="breakfast" data-dish="Masala Dosa" data-timeframe="today this-week next-week">
+<div class="flex gap-space-md">
+<div class="relative w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Golden crisp South Indian masala dosa rolled on a traditional platter, served with two bowls of fresh coconut chutney and hot sambar, soft steam, vibrant culinary setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuV4sCofE-5uJJKTln5K5v3XcD0L4L0FWT7LmwWXEO1wS6jKUv69KRvK1kuqKAS2WxKXkCbbaj2jHBLP607lM2q6DEJ7fWtywxpAOZeFAiW-KkBOwaiODtq5Cvxz0UBl6xLxFCG3FUNfqEfrI8OgdkSlVUqwtiX2pbtqguKelbGb_du-drEG7igbzeL78nSM_8x_p8-_sKvsjFG_AOTVZbvyDE2MoZ9M2b7U52-iTt2p4j1FAih_ow"/>
+<span class="absolute top-1.5 left-1.5 inline-flex items-center justify-center w-5 h-5 rounded bg-secondary-fixed text-on-secondary-fixed shadow-sm" title="Vegetarian">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">circle</span>
+</span>
+</div>
+<div class="flex flex-col justify-between flex-1 min-w-0">
+<div>
+<div class="flex items-start justify-between gap-1 flex-wrap">
+<span class="font-title-md text-title-md text-on-surface font-bold break-words">Masala Dosa</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm flex-shrink-0">Breakfast</span>
+</div>
+<div class="flex items-center gap-1.5 mt-0.5 flex-wrap">
+<div class="flex items-center text-tertiary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md font-bold text-on-surface ml-0.5 card-rating-val">4.8</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant card-rating-count">• 650 ratings</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-1 mt-1">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">All-Time Top</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Crispy</span>
+</div>
+</div>
+</div>
+<div class="mt-space-sm pt-space-sm bg-surface-container-low rounded-lg px-space-sm py-2 flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-1 text-on-surface-variant flex-wrap">
+<span class="font-label-sm text-label-sm uppercase flex-shrink-0">Quick Rate:</span>
+<div class="flex items-center gap-0.5 text-surface-dim hover:text-tertiary cursor-pointer inline-star-rating" data-dish="Masala Dosa">
+<button class="hover:scale-125 transition-transform p-0.5" data-star="1" type="button"><span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="hover:scale-125 transition-transform p-0.5" data-star="2" type="button"><span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="hover:scale-125 transition-transform p-0.5" data-star="3" type="button"><span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="hover:scale-125 transition-transform p-0.5" data-star="4" type="button"><span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="hover:scale-125 transition-transform p-0.5" data-star="5" type="button"><span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span></button>
+</div>
+</div>
+<button class="rate-dish-trigger px-3 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm uppercase active:scale-95 transition-transform flex items-center gap-1 flex-shrink-0" data-dish="Masala Dosa" data-rating="5">
+<span>Submit Rating</span>
+<span class="material-symbols-outlined text-[14px]">edit_note</span>
+</button>
+</div>
+</div>
+<!-- Card 5: Samosa & Masala Chai (Snacks item for testing filters) -->
+<div class="menu-card rounded-xl bg-surface-container-lowest p-space-md shadow-sm transition-all duration-200 hover:shadow-md" data-category="snacks" data-dish="Samosa &amp; Chai" data-timeframe="today tomorrow this-week">
+<div class="flex gap-space-md">
+<div class="relative w-24 h-24 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container">
+<img alt="Crispy golden samosa with steaming tea" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBr9aYXTxVRgCnUcNHvFvJ41WR4uXYj6YbFGCutkXYGKKSG_nOeqkyNqTiR_eKLyCcERNxcJGh4B0PwC9YhMm1BqShbMLOHGUxsxL3G8VnkDchyjpdhgGu7SMrLT8ik9q1bmmkJftc5A0246AwLvuloEGwc7HEaNcJRbGzPTcv-bFSGxfChxfFD2JpS4cv845P2-kBe3jnealK1Vldml66dzrTeuxb_Cdfd6KL91zUJL-ln5lOWiKUk"/>
+<span class="absolute top-1.5 left-1.5 inline-flex items-center justify-center w-5 h-5 rounded bg-secondary-fixed text-on-secondary-fixed shadow-sm" title="Vegetarian">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">circle</span>
+</span>
+</div>
+<div class="flex flex-col justify-between flex-1 min-w-0">
+<div>
+<div class="flex items-start justify-between gap-1 flex-wrap">
+<span class="font-title-md text-title-md text-on-surface font-bold break-words">Samosa &amp; Ginger Chai</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm flex-shrink-0">Snacks</span>
+</div>
+<div class="flex items-center gap-1.5 mt-0.5 flex-wrap">
+<div class="flex items-center text-tertiary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-md text-label-md font-bold text-on-surface ml-0.5 card-rating-val">4.7</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant card-rating-count">• 540 ratings</span>
+</div>
+</div>
+<div class="flex flex-wrap gap-1 mt-1">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">Hostel Evening Hit</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Hot &amp; Crisp</span>
+</div>
+</div>
+</div>
+<div class="mt-space-sm pt-space-sm bg-surface-container-low rounded-lg px-space-sm py-2 flex flex-wrap items-center justify-between gap-2">
+<div class="flex items-center gap-1 text-on-surface-variant flex-wrap">
+<span class="font-label-sm text-label-sm uppercase flex-shrink-0">Quick Rate:</span>
+<div class="flex items-center gap-0.5 text-surface-dim hover:text-tertiary cursor-pointer inline-star-rating" data-dish="Samosa &amp; Chai">
+<button class="hover:scale-125 transition-transform p-0.5" data-star="1" type="button"><span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="hover:scale-125 transition-transform p-0.5" data-star="2" type="button"><span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="hover:scale-125 transition-transform p-0.5" data-star="3" type="button"><span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="hover:scale-125 transition-transform p-0.5" data-star="4" type="button"><span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span></button>
+<button class="hover:scale-125 transition-transform p-0.5" data-star="5" type="button"><span class="material-symbols-outlined text-[18px] text-tertiary" style="font-variation-settings: 'FILL' 1;">star</span></button>
+</div>
+</div>
+<button class="rate-dish-trigger px-3 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm uppercase active:scale-95 transition-transform flex items-center gap-1 flex-shrink-0" data-dish="Samosa &amp; Chai" data-rating="5">
+<span>Submit Rating</span>
+<span class="material-symbols-outlined text-[14px]">edit_note</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Active Inline Rating & Feedback Section (Interactive Card) -->
+<div class="rounded-2xl bg-surface-container-lowest p-space-md sm:p-space-lg shadow-md space-y-space-md mt-space-sm w-full" id="feedback-section">
+<div class="flex items-center justify-between flex-wrap gap-2">
+<div class="flex items-center gap-2 min-w-0">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">rate_review</span>
+</div>
+<div class="min-w-0">
+<h2 class="font-title-md text-title-md text-on-surface font-bold truncate">Rate Today's Meal</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real feedback directly notifies the head mess chef</p>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm flex-shrink-0">Hostel 4 Mess</span>
+</div>
+<!-- Dish Selector Dropdown / Pills -->
+<div class="space-y-1.5 w-full">
+<label class="font-label-md text-label-md text-on-surface-variant block" for="dish-select">Selected Dish</label>
+<div class="relative w-full">
+<select class="w-full appearance-none bg-surface-container-low text-on-surface font-label-lg text-label-lg px-4 py-2.5 rounded-xl cursor-pointer focus:outline-none focus:bg-surface border border-transparent focus:border-primary/20" id="dish-select">
+<option value="Paneer Butter Masala">Paneer Butter Masala (Veg)</option>
+<option value="Chicken Curry">Chicken Curry (Non-Veg)</option>
+<option value="Dal Tadka &amp; Jeera Rice">Dal Tadka &amp; Jeera Rice (Veg)</option>
+<option value="Masala Dosa">Masala Dosa (Breakfast)</option>
+<option value="Samosa &amp; Chai">Samosa &amp; Chai (Snacks)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-2.5 text-on-surface-variant pointer-events-none text-[20px]">expand_more</span>
+</div>
+</div>
+<!-- 5-Star Clickable Score Selector -->
+<div class="flex flex-col items-center justify-center p-space-md bg-surface-container-low rounded-xl gap-1 w-full">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider text-center">Overall Taste Score</span>
+<div class="flex items-center gap-2 mt-1 flex-wrap justify-center" id="star-selector">
+<button class="star-btn text-tertiary hover:scale-125 transition-transform p-1" data-value="1" type="button">
+<span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+<button class="star-btn text-tertiary hover:scale-125 transition-transform p-1" data-value="2" type="button">
+<span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+<button class="star-btn text-tertiary hover:scale-125 transition-transform p-1" data-value="3" type="button">
+<span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+<button class="star-btn text-tertiary hover:scale-125 transition-transform p-1" data-value="4" type="button">
+<span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</button>
+<button class="star-btn text-outline-variant hover:scale-125 transition-transform p-1" data-value="5" type="button">
+<span class="material-symbols-outlined text-[32px]">star</span>
+</button>
+</div>
+<span class="font-label-md text-label-md text-tertiary font-bold mt-1 text-center" id="star-caption">4.0 - Really Good!</span>
+</div>
+<!-- Quick Taste Feedback Tags (Toggleable Pills) -->
+<div class="space-y-2 w-full">
+<label class="font-label-md text-label-md text-on-surface-variant block">Quick Taste Highlights</label>
+<div class="flex flex-wrap gap-2 w-full" id="feedback-tags-container">
+<button class="tag-pill px-3 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md flex items-center gap-1.5 transition-all shadow-sm active:scale-95 flex-shrink-0 cursor-pointer" data-selected="true" type="button">
+<span>👍 Tasty</span>
+</button>
+<button class="tag-pill px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md flex items-center gap-1.5 transition-all active:scale-95 flex-shrink-0 cursor-pointer" data-selected="false" type="button">
+<span>🧂 Too Salty</span>
+</button>
+<button class="tag-pill px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md flex items-center gap-1.5 transition-all active:scale-95 flex-shrink-0 cursor-pointer" data-selected="false" type="button">
+<span>🌶️ Too Spicy</span>
+</button>
+<button class="tag-pill px-3 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md flex items-center gap-1.5 transition-all shadow-sm active:scale-95 flex-shrink-0 cursor-pointer" data-selected="true" type="button">
+<span>🛢️ Too Oily</span>
+</button>
+<button class="tag-pill px-3 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md flex items-center gap-1.5 transition-all shadow-sm active:scale-95 flex-shrink-0 cursor-pointer" data-selected="true" type="button">
+<span>🍽️ Good Quantity</span>
+</button>
+<button class="tag-pill px-3 py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-md text-label-md flex items-center gap-1.5 transition-all active:scale-95 flex-shrink-0 cursor-pointer" data-selected="false" type="button">
+<span>❌ Needs Improvement</span>
+</button>
+</div>
+</div>
+<!-- Comment Textarea -->
+<div class="space-y-1.5 w-full">
+<label class="font-label-md text-label-md text-on-surface-variant block" for="review-textarea">Chef Note &amp; Specific Feedback</label>
+<textarea class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md p-3 rounded-xl focus:bg-surface-container-lowest focus:outline-none transition-all placeholder:text-outline-variant box-border border border-transparent focus:border-primary/20" id="review-textarea" placeholder="How did it taste today? (e.g., spice, temperature, saltiness)" rows="3">Gravy was rich and paneer was very soft today! Less oil please.</textarea>
+</div>
+<!-- Anonymous Toggle -->
+<div class="flex items-center justify-between py-1 cursor-pointer" id="anon-toggle-wrapper">
+<div class="flex items-center gap-2.5">
+<input checked="" class="w-4 h-4 rounded text-primary focus:ring-0 cursor-pointer accent-primary flex-shrink-0" id="anon-checkbox" type="checkbox"/>
+<label class="font-body-md text-body-md text-on-surface cursor-pointer select-none" for="anon-checkbox">Submit feedback anonymously</label>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold" id="anon-status-label">Anonymous</span>
+</div>
+<!-- Action Button -->
+<button class="w-full py-3 rounded-xl bg-primary text-on-primary font-label-lg text-label-lg shadow-sm active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer" id="submit-feedback-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">send</span>
+<span>Submit Rating &amp; Feedback</span>
+</button>
+<!-- Success Notification Toast / Banner (Hidden initially) -->
+<div class="hidden p-space-md rounded-xl bg-secondary-container text-on-secondary-container border border-secondary/20 shadow-md flex items-start gap-2.5 transition-all duration-300 w-full animate-bounce" id="feedback-success-banner">
+<span class="material-symbols-outlined text-[24px] text-secondary flex-shrink-0" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div class="flex-1 min-w-0">
+<p class="font-label-md text-label-md font-bold text-on-secondary-container">Thank you! Your rating has been shared with mess management</p>
+<p class="font-body-sm text-body-sm mt-0.5 text-on-secondary-variant">Chef Satish and the Mess Committee have received your feedback.</p>
+</div>
+<button class="p-1 text-on-secondary-container/70 hover:text-on-secondary-container" id="close-toast-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Floating Toast Container for Quick Actions -->
+<div class="fixed top-20 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 pointer-events-none opacity-0 translate-y-[-10px] max-w-sm w-[90%] bg-surface-container-lowest border border-primary/20 shadow-xl rounded-2xl p-3 flex items-center gap-3" id="quick-toast">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm font-bold text-on-surface" id="quick-toast-msg">Rating submitted!</p>
+<p class="text-xs text-on-surface-variant">Saved to hostel live feed.</p>
+</div>
+</div>
+<script>
+  (function initDiningMenuInteractivity() {
+    let currentRating = 4;
+    let selectedDish = "Paneer Butter Masala";
+
+    // 1. Timeframe Tab Filtering
+    const timeframeTabs = document.querySelectorAll('.timeframe-tab');
+    const menuCards = document.querySelectorAll('.menu-card');
+
+    function filterDishes() {
+      const activeTimeframeTab = document.querySelector('.timeframe-tab.active');
+      const activeMealFilter = document.querySelector('.meal-filter.active');
+      
+      const currentTimeframe = activeTimeframeTab ? activeTimeframeTab.dataset.timeframe : 'today';
+      const currentCategory = activeMealFilter ? activeMealFilter.dataset.meal : 'all';
+
+      menuCards.forEach(card => {
+        const cardCategories = card.dataset.category || '';
+        const cardTimeframes = card.dataset.timeframe || 'today tomorrow this-week next-week';
+
+        const matchesTimeframe = cardTimeframes.includes(currentTimeframe) || currentTimeframe === 'today';
+        const matchesCategory = (currentCategory === 'all') || cardCategories.includes(currentCategory);
+
+        if (matchesTimeframe && matchesCategory) {
+          card.style.display = 'block';
+          card.classList.remove('opacity-0', 'scale-95');
+          card.classList.add('opacity-100', 'scale-100');
+        } else {
+          card.style.display = 'none';
+          card.classList.add('opacity-0', 'scale-95');
+        }
+      });
+    }
+
+    timeframeTabs.forEach(tab => {
+      tab.addEventListener('click', (e) => {
+        e.preventDefault();
+        timeframeTabs.forEach(t => {
+          t.classList.remove('active', 'bg-primary', 'text-on-primary', 'shadow-sm');
+          t.classList.add('text-on-surface-variant');
+        });
+        tab.classList.add('active', 'bg-primary', 'text-on-primary', 'shadow-sm');
+        tab.classList.remove('text-on-surface-variant');
+        filterDishes();
+      });
+    });
+
+    // 2. Meal Category Filter Pills
+    const mealFilters = document.querySelectorAll('.meal-filter');
+    mealFilters.forEach(filter => {
+      filter.addEventListener('click', (e) => {
+        e.preventDefault();
+        mealFilters.forEach(f => {
+          f.classList.remove('active', 'bg-primary-container', 'text-on-primary-container');
+          f.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+        });
+        filter.classList.add('active', 'bg-primary-container', 'text-on-primary-container');
+        filter.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+        filterDishes();
+      });
+    });
+
+    // 3. Quick Feedback Tags toggle
+    const tagPills = document.querySelectorAll('.tag-pill');
+    tagPills.forEach(pill => {
+      pill.addEventListener('click', (e) => {
+        e.preventDefault();
+        const isSelected = pill.getAttribute('data-selected') === 'true';
+        if (isSelected) {
+          pill.setAttribute('data-selected', 'false');
+          pill.classList.remove('bg-secondary-container', 'text-on-secondary-container', 'shadow-sm');
+          pill.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+        } else {
+          pill.setAttribute('data-selected', 'true');
+          pill.classList.add('bg-secondary-container', 'text-on-secondary-container', 'shadow-sm');
+          pill.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+        }
+      });
+    });
+
+    // 4. Interactive 5-Star Selector
+    const starButtons = document.querySelectorAll('#star-selector .star-btn');
+    const starCaption = document.getElementById('star-caption');
+    const captions = [
+      '1.0 - Needs serious improvement',
+      '2.0 - Not up to standard',
+      '3.0 - Average mess food',
+      '4.0 - Really Good!',
+      '5.0 - Chef Masterpiece! Outstanding'
+    ];
+
+    function updateStars(rating) {
+      currentRating = rating;
+      starButtons.forEach((btn, index) => {
+        const icon = btn.querySelector('.material-symbols-outlined');
+        if (index < rating) {
+          btn.classList.add('text-tertiary');
+          btn.classList.remove('text-outline-variant');
+          icon.textContent = 'star';
+          icon.style.fontVariationSettings = "'FILL' 1";
+        } else {
+          btn.classList.remove('text-tertiary');
+          btn.classList.add('text-outline-variant');
+          icon.textContent = 'star';
+          icon.style.fontVariationSettings = "'FILL' 0";
+        }
+      });
+      if (starCaption) {
+        starCaption.textContent = captions[rating - 1] || `${rating}.0 Selected`;
+      }
+    }
+
+    starButtons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const val = parseInt(btn.dataset.value, 10);
+        updateStars(val);
+      });
+    });
+
+    // 5. Toast Notification Helper
+    const quickToast = document.getElementById('quick-toast');
+    const quickToastMsg = document.getElementById('quick-toast-msg');
+    let toastTimeout;
+    function showQuickToast(message) {
+      if (!quickToast) return;
+      if (quickToastMsg) quickToastMsg.textContent = message;
+      quickToast.classList.remove('opacity-0', 'translate-y-[-10px]');
+      quickToast.classList.add('opacity-100', 'translate-y-0');
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        quickToast.classList.add('opacity-0', 'translate-y-[-10px]');
+        quickToast.classList.remove('opacity-100', 'translate-y-0');
+      }, 2500);
+    }
+
+    // 6. Quick Rate Inline and Rate Dish Trigger Buttons
+    const dishSelect = document.getElementById('dish-select');
+    const feedbackSection = document.getElementById('feedback-section');
+
+    document.querySelectorAll('.inline-star-rating').forEach(group => {
+      const buttons = group.querySelectorAll('button');
+      const dish = group.dataset.dish;
+      buttons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const starVal = parseInt(btn.dataset.star, 10);
+          buttons.forEach((b, idx) => {
+            const starIcon = b.querySelector('.material-symbols-outlined');
+            if (idx < starVal) {
+              starIcon.classList.add('text-tertiary');
+              starIcon.classList.remove('text-outline-variant');
+              starIcon.style.fontVariationSettings = "'FILL' 1";
+            } else {
+              starIcon.classList.remove('text-tertiary');
+              starIcon.classList.add('text-outline-variant');
+              starIcon.style.fontVariationSettings = "'FILL' 0";
+            }
+          });
+          // Update corresponding rate trigger's initial rating
+          const card = group.closest('.menu-card');
+          if (card) {
+            const trigger = card.querySelector('.rate-dish-trigger');
+            if (trigger) trigger.dataset.rating = starVal;
+          }
+          showQuickToast(`Rated ${starVal}★ for ${dish}`);
+        });
+      });
+    });
+
+    const rateDishButtons = document.querySelectorAll('.rate-dish-trigger');
+    rateDishButtons.forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+        const dishName = button.dataset.dish;
+        const initialRating = parseInt(button.dataset.rating || '4', 10);
+
+        if (dishSelect) {
+          for (let option of dishSelect.options) {
+            if (option.value.toLowerCase().includes(dishName.toLowerCase()) || dishName.toLowerCase().includes(option.value.toLowerCase())) {
+              option.selected = true;
+              break;
+            }
+          }
+        }
+
+        updateStars(initialRating);
+        showQuickToast(`Form loaded for ${dishName}`);
+
+        if (feedbackSection) {
+          feedbackSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          feedbackSection.classList.add('ring-2', 'ring-primary', 'shadow-lg');
+          setTimeout(() => feedbackSection.classList.remove('ring-2', 'ring-primary', 'shadow-lg'), 1200);
+        }
+      });
+    });
+
+    // 7. Anonymous Toggle
+    const anonCheckbox = document.getElementById('anon-checkbox');
+    const anonLabel = document.getElementById('anon-status-label');
+    if (anonCheckbox && anonLabel) {
+      anonCheckbox.addEventListener('change', () => {
+        anonLabel.textContent = anonCheckbox.checked ? 'Anonymous' : 'Public (Student ID)';
+        anonLabel.className = anonCheckbox.checked ? 'font-label-sm text-label-sm text-secondary font-semibold' : 'font-label-sm text-label-sm text-on-surface-variant';
+      });
+    }
+
+    // 8. Submit Feedback Button & Validation & Animated Success
+    const submitBtn = document.getElementById('submit-feedback-btn');
+    const successBanner = document.getElementById('feedback-success-banner');
+    const closeToastBtn = document.getElementById('close-toast-btn');
+    const reviewTextarea = document.getElementById('review-textarea');
+
+    if (closeToastBtn && successBanner) {
+      closeToastBtn.addEventListener('click', () => {
+        successBanner.classList.add('hidden');
+      });
+    }
+
+    if (submitBtn && successBanner) {
+      submitBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        submitBtn.disabled = true;
+        const originalHtml = submitBtn.innerHTML;
+        submitBtn.innerHTML = `
+          <span class="material-symbols-outlined animate-spin text-[20px]">progress_activity</span>
+          <span>Transmitting Rating...</span>
+        `;
+        
+        setTimeout(() => {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalHtml;
+          successBanner.classList.remove('hidden');
+          successBanner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          
+          showQuickToast('Thank you! Rating shared with mess management.');
+
+          // Reset form inputs
+          if (reviewTextarea) {
+            reviewTextarea.value = '';
+          }
+          // Reset feedback tags
+          tagPills.forEach(p => {
+            p.setAttribute('data-selected', 'false');
+            p.classList.remove('bg-secondary-container', 'text-on-secondary-container', 'shadow-sm');
+            p.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+          });
+        }, 600);
+      });
+    }
+
+    // 9. Monthly Menu Voting live increment
+    const voteBtns = document.querySelectorAll('.monthly-vote-btn');
+    const dosaCountEl = document.getElementById('dosa-count');
+    const pizzaCountEl = document.getElementById('pizza-count');
+    const dosaBadgeEl = document.getElementById('dosa-badge');
+    const pizzaBadgeEl = document.getElementById('pizza-badge');
+    const totalVotesCountEl = document.getElementById('total-votes-count');
+
+    let dosaVotes = 382;
+    let pizzaVotes = 291;
+    let totalVotes = 1248;
+
+    voteBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const item = btn.dataset.item;
+        const hasVoted = btn.dataset.voted === 'true';
+
+        if (!hasVoted) {
+          btn.dataset.voted = 'true';
+          totalVotes += 1;
+          if (totalVotesCountEl) totalVotesCountEl.textContent = totalVotes.toLocaleString();
+
+          if (item === 'dosa') {
+            dosaVotes += 1;
+            if (dosaCountEl) dosaCountEl.textContent = dosaVotes;
+            if (dosaBadgeEl) dosaBadgeEl.textContent = `${dosaVotes} votes`;
+          } else if (item === 'pizza') {
+            pizzaVotes += 1;
+            if (pizzaCountEl) pizzaCountEl.textContent = pizzaVotes;
+            if (pizzaBadgeEl) pizzaBadgeEl.textContent = `${pizzaVotes} votes`;
+          }
+
+          btn.classList.remove('bg-tertiary');
+          btn.classList.add('bg-secondary');
+          btn.innerHTML = `
+            <span>Voted ✓</span>
+            <span class="material-symbols-outlined text-[14px]">check</span>
+          `;
+          showQuickToast(`Vote recorded for ${item === 'dosa' ? 'Masala Dosa' : 'Paneer Pizza'}!`);
+        } else {
+          showQuickToast(`You've already voted for this item.`);
+        }
+      });
+    });
+
+    // 10. Bottom Navigation Tab Routing
+    const navTabs = document.querySelectorAll('nav a[data-path]');
+    navTabs.forEach(tab => {
+      tab.addEventListener('click', (e) => {
+        const path = tab.getAttribute('data-path');
+        if (path === 'dashboard') {
+          e.preventDefault();
+          window.location.href = 'student-dashboard.html';
+        } else if (path === 'live-queue') {
+          e.preventDefault();
+          window.location.href = 'live-queue-ticket.html';
+        } else if (path === 'dining-menu') {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else if (path === 'feedback-and-vote') {
+          e.preventDefault();
+          document.getElementById('monthly-voting-banner')?.scrollIntoView({ behavior: 'smooth' });
+        } else if (path === 'profile-settings') {
+          e.preventDefault();
+          window.location.href = 'student-dashboard.html';
+        }
+      });
+    });
+
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/85 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-bold"><div class="flex items-center justify-around h-16 px-gutter max-w-2xl mx-auto"><a class="flex flex-col items-center justify-center flex-1 h-full py-1 text-on-surface-variant hover:text-on-surface transition-colors min-w-[44px]" data-path="dashboard" href="student-dashboard.html"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-label-sm mt-0.5">Home</span></a><a class="flex flex-col items-center justify-center flex-1 h-full py-1 text-on-surface-variant hover:text-on-surface transition-colors min-w-[44px]" data-path="live-queue" href="live-queue-ticket.html"><span class="material-symbols-outlined text-[22px]">qr_code_scanner</span><span class="font-label-sm text-label-sm mt-0.5">Queue</span></a><a aria-current="page" class="flex flex-col items-center justify-center flex-1 h-full py-1 transition-colors min-w-[44px] text-primary font-bold" data-path="dining-menu" href="dining-menu-ratings.html"><span class="material-symbols-outlined text-[22px]">restaurant_menu</span><span class="font-label-sm text-label-sm mt-0.5">Menu</span></a><a class="flex flex-col items-center justify-center flex-1 h-full py-1 text-on-surface-variant hover:text-on-surface transition-colors min-w-[44px]" data-path="feedback-and-vote" href="#monthly-voting-banner"><span class="material-symbols-outlined text-[22px]">rate_review</span><span class="font-label-sm text-label-sm mt-0.5">Vote</span></a><a class="flex flex-col items-center justify-center flex-1 h-full py-1 text-on-surface-variant hover:text-on-surface transition-colors min-w-[44px]" data-path="profile-settings" href="student-dashboard.html"><span class="material-symbols-outlined text-[22px]">manage_accounts</span><span class="font-label-sm text-label-sm mt-0.5">Profile</span></a></div></nav>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../js/supabase.js"></script>
+<script src="../js/smartmess-nav.js"></script>
+</body></html>

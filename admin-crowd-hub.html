@@ -1,0 +1,377 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_stack" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#faf8ff;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'outline-variant': '#bcc9c6', 'on-secondary-fixed-variant': '#005137', 'outline': '#6d7a77', 'on-background': '#131b2e', 'secondary-fixed-dim': '#68dba9', 'surface-variant': '#dae2fd', 'inverse-primary': '#6bd8cb', 'primary-fixed': '#89f5e7', 'secondary': '#006c4a', 'on-secondary-fixed': '#002114', 'surface-container-low': '#f2f3ff', 'secondary-fixed': '#85f8c4', 'secondary-container': '#82f5c1', 'tertiary-fixed-dim': '#ffb95f', 'on-surface': '#131b2e', 'surface-container-highest': '#dae2fd', 'tertiary-container': '#a36700', 'tertiary': '#825100', 'surface': '#faf8ff', 'inverse-on-surface': '#eef0ff', 'surface-container-lowest': '#ffffff', 'surface-bright': '#faf8ff', 'surface-container': '#eaedff', 'surface-dim': '#d2d9f4', 'primary-container': '#008378', 'on-error': '#ffffff', 'on-surface-variant': '#3d4947', 'on-error-container': '#93000a', 'on-primary': '#ffffff', 'background': '#faf8ff', 'on-secondary-container': '#00714e', 'primary-fixed-dim': '#6bd8cb', 'error-container': '#ffdad6', 'on-primary-fixed-variant': '#005049', 'surface-container-high': '#e2e7ff', 'on-tertiary': '#ffffff', 'on-tertiary-fixed': '#2a1700', 'primary': '#00685f', 'on-tertiary-container': '#fffbff', 'tertiary-fixed': '#ffddb8', 'on-primary-container': '#f4fffc', 'inverse-surface': '#283044', 'on-tertiary-fixed-variant': '#653e00', 'surface-tint': '#006a61', 'error': '#ba1a1a', 'on-secondary': '#ffffff', 'on-primary-fixed': '#00201d' }, borderRadius: { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, spacing: { 'space-xs': '0.25rem', 'space-md': '1rem', 'gutter-tablet': '1.25rem', 'space-lg': '1.5rem', 'margin-tablet': '1.5rem', 'space-xl': '2rem', 'gutter': '1rem', 'gutter-desktop': '1.5rem', 'space-sm': '0.5rem', 'margin': '1rem', 'margin-desktop': '2.5rem' }, fontFamily: { 'body-md': ['Plus Jakarta Sans'], 'display-lg': ['Plus Jakarta Sans'], 'label-md': ['Plus Jakarta Sans'], 'headline-xl': ['Plus Jakarta Sans'], 'label-sm': ['Plus Jakarta Sans'], 'body-lg': ['Plus Jakarta Sans'], 'body-sm': ['Plus Jakarta Sans'], 'headline-lg-mobile': ['Plus Jakarta Sans'], 'label-lg': ['Plus Jakarta Sans'], 'headline-lg': ['Plus Jakarta Sans'], 'title-md': ['Plus Jakarta Sans'] }, fontSize: { 'body-md': ['14px', { lineHeight: '20px', letterSpacing: '0em', fontWeight: '400' }], 'display-lg': ['40px', { lineHeight: '48px', letterSpacing: '-0.03em', fontWeight: '800' }], 'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0.02em', fontWeight: '600' }], 'headline-xl': ['32px', { lineHeight: '40px', letterSpacing: '-0.025em', fontWeight: '700' }], 'label-sm': ['10px', { lineHeight: '14px', letterSpacing: '0.04em', fontWeight: '700' }], 'body-lg': ['16px', { lineHeight: '24px', letterSpacing: '0em', fontWeight: '400' }], 'body-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.01em', fontWeight: '400' }], 'headline-lg-mobile': ['20px', { lineHeight: '28px', letterSpacing: '-0.015em', fontWeight: '700' }], 'label-lg': ['14px', { lineHeight: '18px', letterSpacing: '0.01em', fontWeight: '600' }], 'headline-lg': ['24px', { lineHeight: '32px', letterSpacing: '-0.02em', fontWeight: '700' }], 'title-md': ['18px', { lineHeight: '24px', letterSpacing: '-0.01em', fontWeight: '600' }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-background font-body-md text-on-surface antialiased flex flex-col min-h-screen h-auto overflow-y-auto overflow-x-hidden w-full pb-28"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-xs min-w-0 cursor-pointer" onclick="window.location.href='welcome-role-portal.html'" title="Return to Portal"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container transition-colors cursor-pointer" onclick="event.stopPropagation(); if (window.history.length > 1) { window.history.back(); } else { window.location.href='welcome-role-portal.html'; }"><span class="material-symbols-outlined text-[22px]">arrow_back</span></button><img alt="SmartMess Brand Logo" class="h-7 w-auto object-contain flex-shrink-0 ml-1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJchqQzWw_3HFe5_So0ytjoL5bkm9xmolQOvjRt-InirpsPCFUmcZC8KqvJzzuTuaWl-ws3R57t_jCtWw11rLZ5NHouTiBmMu5JjsRxx4YvzTB2Fx4IHLkn_290ZM6vCOIVaITkEmlX8QjmVFaKhLi0ZrrbogPdfs-Aiygjnq0AiApYmllfE1qrw4lMUqGyyK26or9kDcUR3-g2uADmPFpaRAo-3_o-v7pJ5GAUneN1TdJCG_rgVcD"><h1 class="font-title-md text-title-md text-on-surface truncate ml-2">Admin Throughput Radar</h1></div><div class="flex items-center gap-space-sm flex-shrink-0"><button aria-label="Help &amp; Info" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[22px]">info</span></button><div class="w-11 h-11 flex items-center justify-center"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABB43DNrDcn0k4XImqtFDgCkemDToE5ry5NDjme949CMZ86Q5DWwpcOcPb98PEx7USmw-s-mXs5GycS0JO7lk5__Fbg6g9g3deOT9OAcmeVXVmzJoEaG46TrY1IqinvI3igMs-1-Hcih48ziWibiUiUwxcJ_5v314f9pbfOJYlsNuypEg1pFvrhsxiulXwMheMAMKL8JjShoeNleaV15imKUERHi568NnscwfXtwCIbXd538UOyVJC"></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface min-h-screen"><div class="flex flex-col w-full max-w-4xl mx-auto px-margin pb-space-xl gap-space-lg">
+<!-- Hub Status Overview Banner -->
+<div class="flex flex-col gap-space-xs pt-space-sm">
+<div class="flex items-center justify-between">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-secondary-container text-on-secondary-container">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-sm text-label-sm tracking-wide uppercase">All Systems Operational • AI Vision Online</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">sync</span>
+        Live 1s refresh
+      </span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-bold tracking-tight">Mess Administration Hub</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-time crowd AI, queue throughput, menu editor &amp; feedback analytics</p>
+</div>
+</div>
+<!-- Admin KPI Metrics Grid (Asymmetric Bento) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+<!-- Occupancy Main Tile -->
+<div class="col-span-1 sm:col-span-2 lg:col-span-4 bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[18px] text-tertiary">group</span>
+          Current Occupancy
+        </span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-semibold">
+          49% • Moderate
+        </span>
+</div>
+<div class="flex items-baseline justify-between mt-1">
+<div class="flex items-baseline gap-1">
+<span class="font-display-lg text-headline-xl font-extrabold text-on-surface">147</span>
+<span class="font-body-md text-body-md text-on-surface-variant">/ 300 Max</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold flex items-center">
+<span class="material-symbols-outlined text-[16px]">trending_up</span> Optimal Flow
+        </span>
+</div>
+<!-- Dual-tone capacity progress track -->
+<div class="w-full bg-surface-container h-2.5 rounded-full overflow-hidden flex mt-1">
+<div class="bg-secondary h-full transition-all duration-500" style="width: 49%;"></div>
+<div class="bg-outline-variant/30 h-full flex-1"></div>
+</div>
+</div>
+<!-- Virtual Queue Metric -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-primary">directions_walk</span>
+          Virtual Queue
+        </span>
+<span class="w-2 h-2 rounded-full bg-primary-container animate-ping"></span>
+</div>
+<div>
+<p class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface">32 <span class="font-label-sm text-label-sm text-on-surface-variant font-normal">students</span></p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Avg wait: <span class="font-semibold text-primary">~7 min</span></p>
+</div>
+</div>
+<!-- Optical Flow Velocity -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">videocam</span>
+          AI Optical Flow
+        </span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-title-md text-title-md font-bold text-secondary">+14 In</span>
+<span class="text-outline-variant font-body-sm">|</span>
+<span class="font-title-md text-title-md font-bold text-tertiary-container">-9 Out</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Throughput: 23/min</p>
+</div>
+</div>
+<!-- Quality Rating Metric -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim" style="font-variation-settings: 'FILL' 1;">star</span>
+          Quality Index
+        </span>
+</div>
+<div>
+<div class="flex items-baseline gap-1">
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface">4.1</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/ 5.0</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">1,284 ratings (mo)</p>
+</div>
+</div>
+<!-- Student Complaints / Action item -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-error">report_problem</span>
+          Open Tickets
+        </span>
+<span class="px-1.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">New</span>
+</div>
+<div>
+<p class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-error">3 Pending</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Under admin review</p>
+</div>
+</div>
+</div>
+<!-- Live AI Camera Monitor & Occupancy Radar -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md overflow-hidden flex flex-col">
+<!-- Camera Viewport Header -->
+<div class="p-space-md bg-inverse-surface text-inverse-on-surface flex items-center justify-between">
+<div class="flex items-center gap-space-sm min-w-0">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-fixed opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-secondary-container"></span>
+</span>
+<div class="min-w-0">
+<h3 class="font-label-lg text-label-lg font-bold truncate text-inverse-on-surface">Cam-02 South Entrance Gate</h3>
+<p class="font-label-sm text-label-sm text-inverse-on-surface/70">YOLOv8 Real-time Inference • 30 FPS</p>
+</div>
+</div>
+<span class="px-2 py-1 rounded bg-inverse-on-surface/10 text-inverse-on-surface font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">sensors</span> HD Live
+      </span>
+</div>
+<!-- Simulated AI Visual Stream Screen -->
+<div class="relative w-full aspect-video bg-slate-950 overflow-hidden flex items-center justify-center">
+<!-- Camera Base Feed Placeholder Image with Realistic Mess Backdrop -->
+<img class="w-full h-full object-cover opacity-60" data-alt="High tech CCTV security camera surveillance perspective of a bustling college university dining hall cafeteria turnstile turn gates, soft modern architectural lighting with slate tiled floor, students passing through, clean teal and dark ambiance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmB7LIVfbdBtVrMGxsH3y0NoNGz9NNR_At0QvPWD3rq-lgT-1x2tarSPXfvDECG0MXUru3B1qc3Dhpil6n00iB7gFT9j0osCTGO1bet4NUPY83yUoniZ6lmJC7sI9MidImIoLOvsbjXbtw-Je_UIQwV2LTeJWVlwlTmhKxj0869x9oB-mblmPY3_W4zJZmNNxfqIifrKZO7WwLXr-Z6zNhBI_tW4wHJ2h6t3kAQ7WA1gvT-nRUxANU">
+<!-- Optical Entry & Exit Tripwire Guides -->
+<div class="absolute inset-0 pointer-events-none">
+<!-- Entry Tripwire Line -->
+<div class="absolute top-[35%] left-0 right-0 h-[2px] bg-secondary-fixed-dim/90 shadow-[0_0_8px_rgba(104,219,169,0.8)] flex items-center justify-between px-3">
+<span class="font-label-sm text-[9px] uppercase tracking-widest text-on-secondary-fixed bg-secondary-fixed px-1 py-0.5 rounded font-bold">Line A: Optical Inflow Threshold</span>
+<span class="font-label-sm text-[9px] text-secondary-fixed font-mono">+14 IN</span>
+</div>
+<!-- Exit Tripwire Line -->
+<div class="absolute top-[68%] left-0 right-0 h-[2px] bg-tertiary-fixed/80 shadow-[0_0_8px_rgba(255,221,184,0.7)] flex items-center justify-between px-3">
+<span class="font-label-sm text-[9px] uppercase tracking-widest text-on-tertiary-fixed bg-tertiary-fixed px-1 py-0.5 rounded font-bold">Line B: Optical Outflow Counter</span>
+<span class="font-label-sm text-[9px] text-tertiary-fixed font-mono">-9 OUT</span>
+</div>
+<!-- Simulated Computer Vision Detection Bounding Box 1 -->
+<div class="absolute top-[28%] left-[22%] w-[26%] h-[42%] border-2 border-secondary-fixed-dim rounded shadow-[0_0_10px_rgba(104,219,169,0.5)]">
+<div class="absolute -top-5 left-0 bg-secondary-fixed-dim text-on-secondary-fixed px-1.5 py-0.5 text-[9px] font-mono font-bold tracking-tight rounded-t flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            #214 0.94 CONF
+          </div>
+<div class="w-full h-full bg-secondary-fixed-dim/10"></div>
+</div>
+<!-- Simulated Computer Vision Detection Bounding Box 2 -->
+<div class="absolute top-[36%] right-[24%] w-[24%] h-[48%] border-2 border-primary-fixed rounded shadow-[0_0_10px_rgba(137,245,231,0.5)]">
+<div class="absolute -top-5 left-0 bg-primary-fixed text-on-primary-fixed px-1.5 py-0.5 text-[9px] font-mono font-bold tracking-tight rounded-t flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+            #215 0.98 CONF
+          </div>
+<div class="w-full h-full bg-primary-fixed/10"></div>
+</div>
+<!-- HUD telemetry HUD overlay -->
+<div class="absolute bottom-2 left-3 right-3 flex items-center justify-between text-surface/80 font-mono text-[10px]">
+<span class="">GRID: GATE-SOUTH-02</span>
+<span class="">LATENCY: 18ms</span>
+<span class="text-secondary-fixed">● TRACKING OK</span>
+</div>
+</div>
+</div>
+<!-- Vision Controls & Calibration Toggles -->
+<div class="p-space-md bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between text-on-surface">
+<span class="font-label-md text-label-md font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px] text-primary">tune</span>
+          AI Sensitivity Sensor
+        </span>
+<span class="font-label-sm text-label-sm font-bold text-primary" id="sensitivity-label">High (92%)</span>
+</div>
+<div class="flex items-center gap-space-md">
+<input class="w-full accent-primary h-2 bg-surface-container rounded-lg cursor-pointer" id="sensitivity-slider" max="100" min="50" type="range" value="92">
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-2 pt-space-xs">
+<button class="px-space-md py-2 rounded-lg bg-surface-container-highest text-on-surface font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 active:scale-95 transition-transform w-full sm:flex-1">
+<span class="material-symbols-outlined text-[16px]">crop_free</span>
+          Calibrate Bounds
+        </button>
+<button class="px-space-md py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 active:scale-95 transition-transform w-full sm:flex-1">
+<span class="material-symbols-outlined text-[16px]">restart_alt</span>
+          Reset Density
+        </button>
+</div>
+</div>
+</div>
+<!-- Menu Management & Emergency Meal Swap Controls -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md" id="menu-editor-section">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[20px] text-primary">restaurant_menu</span>
+<h3 class="font-title-md text-title-md font-bold text-on-surface">Weekly Menu Publishing</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Instant updates &amp; live dietary dispatch</p>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">
+        W38 Active
+      </span>
+</div>
+<!-- Publishing Status Pill Toggles -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+<button class="py-1.5 rounded-lg bg-surface-container-lowest text-on-surface font-label-md text-label-md font-semibold shadow-xs flex items-center justify-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+        Current Week (Live)
+      </button>
+<button class="py-1.5 rounded-lg text-on-surface-variant font-label-md text-label-md font-semibold flex items-center justify-center gap-1">
+        Next Week (3 Drafts)
+      </button>
+</div>
+<!-- Instant Emergency Meal Swap Tool Container -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary uppercase font-bold tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">bolt</span>
+          Emergency Item Override
+        </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Today: Monday Lunch</span>
+</div>
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-space-sm bg-surface-container-lowest p-space-sm rounded-lg">
+<!-- Replaced Item -->
+<div class="flex items-center gap-space-sm flex-1 min-w-0">
+<span class="w-3 h-3 rounded-full bg-error flex-shrink-0" title="Non-Veg"></span>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-outline block">Replacing</span>
+<span class="font-label-lg text-label-lg font-bold text-on-surface truncate block">Chicken Curry</span>
+</div>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary flex-shrink-0 self-center rotate-90 sm:rotate-0 transition-transform">
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</div>
+<!-- New Substitute Item -->
+<div class="flex items-center gap-space-sm flex-1 min-w-0">
+<span class="w-3 h-3 rounded-full bg-secondary flex-shrink-0" title="Veg"></span>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-outline block">New Menu Item</span>
+<span class="font-label-lg text-label-lg font-bold text-primary truncate block">Paneer Butter</span>
+</div>
+</div>
+</div>
+<!-- Action Confirmation & Broadcast -->
+<button class="px-space-md py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 active:scale-95 transition-transform w-full sm:flex-1" id="broadcast-swap-btn">
+<span class="material-symbols-outlined text-[18px]">campaign</span>
+        Confirm &amp; Notify 2,430 Students
+      </button>
+<!-- Live Broadcast Preview Toast -->
+<div class="flex items-center gap-space-sm p-space-sm bg-primary-fixed text-on-primary-fixed rounded-lg text-body-sm font-body-sm">
+<span class="material-symbols-outlined text-[18px] text-on-primary-fixed-variant">notifications_active</span>
+<span class="truncate">Preview: “🔔 Monday Lunch swapped: Paneer Butter now serving.”</span>
+</div>
+</div>
+</div>
+<!-- AI Mess Insights & Chef Actionable Recommendations -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md" id="ai-insights-section">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-primary">auto_awesome</span>
+<h3 class="font-title-md text-title-md font-bold text-on-surface">AI Insights &amp; Chef Actions</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold">3 New Prompts</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Quality Alert Card -->
+<div class="p-space-sm bg-tertiary-fixed/30 rounded-xl flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-tertiary-container text-on-tertiary-container flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">lunch_dining</span>
+</div>
+<div class="flex flex-col gap-0.5 flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-tertiary uppercase">Recipe Feedback Alert</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2h ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+<span class="font-bold text-tertiary">72 students</span> reported Chicken Curry was too salty on Thursday. Recommended recipe calibration: decrease salt blend by 14%.
+          </p>
+<div class="flex items-center gap-2 mt-1">
+<button class="px-2 py-1 rounded bg-tertiary text-on-tertiary font-label-sm text-label-sm font-semibold">Log to Kitchen</button>
+<button class="px-2 py-1 rounded bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm font-semibold">Dismiss</button>
+</div>
+</div>
+</div>
+<!-- Demand Trend Card -->
+<div class="p-space-sm bg-secondary-container/40 rounded-xl flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-secondary text-on-secondary flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">trending_up</span>
+</div>
+<div class="flex flex-col gap-0.5 flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-secondary uppercase">Demand Trend</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Today</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+            South Indian breakfast requests surged <span class="font-bold text-secondary">+38% this week</span>. Increase batter prep volume for Wednesday batch.
+          </p>
+</div>
+</div>
+<!-- Bottleneck Warning Card -->
+<div class="p-space-sm bg-error-container/40 rounded-xl flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-error text-on-error flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">alarm_on</span>
+</div>
+<div class="flex flex-col gap-0.5 flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-error uppercase">Bottleneck Warning</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">1:15 PM Forecast</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+            Expected queue surge peak at 1:15 PM (+45 students). Advised opening second service counter to avoid hall spillover.
+          </p>
+<div class="mt-1">
+<button class="px-2 py-1 rounded bg-error text-on-error font-label-sm text-label-sm font-semibold">Activate Gate 2</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Admin Control Strip Navigation -->
+<div class="sticky bottom-2 z-40 bg-surface-container-lowest/90 backdrop-blur-md rounded-2xl p-space-xs shadow-xl flex items-center justify-between gap-1 w-full max-w-4xl mx-auto">
+<button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="flex-1 py-2 px-1 rounded-xl bg-primary text-on-primary font-label-sm text-label-sm font-bold flex flex-col items-center justify-center gap-0.5 shadow-sm cursor-pointer">
+<span class="material-symbols-outlined text-[20px]">dynamic_feed</span>
+      Queue Flow
+    </button>
+<button onclick="document.getElementById('menu-editor-section')?.scrollIntoView({ behavior: 'smooth' })" class="flex-1 py-2 px-1 rounded-xl text-on-surface-variant hover:bg-surface-container font-label-sm text-label-sm font-semibold flex flex-col items-center justify-center gap-0.5 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-[20px]">edit_calendar</span>
+      Menu Editor
+    </button>
+<button onclick="document.getElementById('ai-insights-section')?.scrollIntoView({ behavior: 'smooth' })" class="flex-1 py-2 px-1 rounded-xl text-on-surface-variant hover:bg-surface-container font-label-sm text-label-sm font-semibold flex flex-col items-center justify-center gap-0.5 relative transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-[20px]">feedback</span>
+<span class="">Complaints</span>
+<span class="absolute top-1 right-2 w-4 h-4 rounded-full bg-error text-on-error font-bold text-[9px] flex items-center justify-center">34</span>
+</button>
+<button onclick="document.getElementById('ai-insights-section')?.scrollIntoView({ behavior: 'smooth' })" class="flex-1 py-2 px-1 rounded-xl text-on-surface-variant hover:bg-surface-container font-label-sm text-label-sm font-semibold flex flex-col items-center justify-center gap-0.5 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-[20px]">insights</span>
+      AI Reports
+    </button>
+</div>
+</div>
+<script>
+  // Dynamic micro-interactions for the Admin hub
+  const slider = document.getElementById('sensitivity-slider');
+  const label = document.getElementById('sensitivity-label');
+  if (slider && label) {
+    slider.addEventListener('input', (e) => {
+      const val = e.target.value;
+      label.textContent = `${val >= 80 ? 'High' : (val >= 60 ? 'Medium' : 'Low')} (${val}%)`;
+    });
+  }
+
+  const broadcastBtn = document.getElementById('broadcast-swap-btn');
+  if (broadcastBtn) {
+    broadcastBtn.addEventListener('click', () => {
+      const originalText = broadcastBtn.innerHTML;
+      broadcastBtn.classList.remove('bg-primary');
+      broadcastBtn.classList.add('bg-secondary');
+      broadcastBtn.innerHTML = '<span class="material-symbols-outlined text-[18px]">done_all</span> Notified 2,430 Devices!';
+      setTimeout(() => {
+        broadcastBtn.classList.remove('bg-secondary');
+        broadcastBtn.classList.add('bg-primary');
+        broadcastBtn.innerHTML = originalText;
+      }, 3000);
+    });
+  }
+</script></main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../js/supabase.js"></script>
+<script src="../js/smartmess-nav.js"></script>
+</body></html>

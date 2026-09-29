@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+
+<html class="h-auto overflow-y-auto" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#faf8ff;touch-action:pan-y;-webkit-overflow-scrolling:touch;}body{-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'outline-variant': '#bcc9c6', 'on-secondary-fixed-variant': '#005137', 'outline': '#6d7a77', 'on-background': '#131b2e', 'secondary-fixed-dim': '#68dba9', 'surface-variant': '#dae2fd', 'inverse-primary': '#6bd8cb', 'primary-fixed': '#89f5e7', 'secondary': '#006c4a', 'on-secondary-fixed': '#002114', 'surface-container-low': '#f2f3ff', 'secondary-fixed': '#85f8c4', 'secondary-container': '#82f5c1', 'tertiary-fixed-dim': '#ffb95f', 'on-surface': '#131b2e', 'surface-container-highest': '#dae2fd', 'tertiary-container': '#a36700', 'tertiary': '#825100', 'surface': '#faf8ff', 'inverse-on-surface': '#eef0ff', 'surface-container-lowest': '#ffffff', 'surface-bright': '#faf8ff', 'surface-container': '#eaedff', 'surface-dim': '#d2d9f4', 'primary-container': '#008378', 'on-error': '#ffffff', 'on-surface-variant': '#3d4947', 'on-error-container': '#93000a', 'on-primary': '#ffffff', 'background': '#faf8ff', 'on-secondary-container': '#00714e', 'primary-fixed-dim': '#6bd8cb', 'error-container': '#ffdad6', 'on-primary-fixed-variant': '#005049', 'surface-container-high': '#e2e7ff', 'on-tertiary': '#ffffff', 'on-tertiary-fixed': '#2a1700', 'primary': '#00685f', 'on-tertiary-container': '#fffbff', 'tertiary-fixed': '#ffddb8', 'on-primary-container': '#f4fffc', 'inverse-surface': '#283044', 'on-tertiary-fixed-variant': '#653e00', 'surface-tint': '#006a61', 'error': '#ba1a1a', 'on-secondary': '#ffffff', 'on-primary-fixed': '#00201d' }, borderRadius: { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, spacing: { 'space-xs': '0.25rem', 'space-md': '1rem', 'gutter-tablet': '1.25rem', 'space-lg': '1.5rem', 'margin-tablet': '1.5rem', 'space-xl': '2rem', 'gutter': '1rem', 'gutter-desktop': '1.5rem', 'space-sm': '0.5rem', 'margin': '1rem', 'margin-desktop': '2.5rem' }, fontFamily: { 'body-md': ['Plus Jakarta Sans'], 'display-lg': ['Plus Jakarta Sans'], 'label-md': ['Plus Jakarta Sans'], 'headline-xl': ['Plus Jakarta Sans'], 'label-sm': ['Plus Jakarta Sans'], 'body-lg': ['Plus Jakarta Sans'], 'body-sm': ['Plus Jakarta Sans'], 'headline-lg-mobile': ['Plus Jakarta Sans'], 'label-lg': ['Plus Jakarta Sans'], 'headline-lg': ['Plus Jakarta Sans'], 'title-md': ['Plus Jakarta Sans'] }, fontSize: { 'body-md': ['14px', { lineHeight: '20px', letterSpacing: '0em', fontWeight: '400' }], 'display-lg': ['40px', { lineHeight: '48px', letterSpacing: '-0.03em', fontWeight: '800' }], 'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0.02em', fontWeight: '600' }], 'headline-xl': ['32px', { lineHeight: '40px', letterSpacing: '-0.025em', fontWeight: '700' }], 'label-sm': ['10px', { lineHeight: '14px', letterSpacing: '0.04em', fontWeight: '700' }], 'body-lg': ['16px', { lineHeight: '24px', letterSpacing: '0em', fontWeight: '400' }], 'body-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.01em', fontWeight: '400' }], 'headline-lg-mobile': ['20px', { lineHeight: '28px', letterSpacing: '-0.015em', fontWeight: '700' }], 'label-lg': ['14px', { lineHeight: '18px', letterSpacing: '0.01em', fontWeight: '600' }], 'headline-lg': ['24px', { lineHeight: '32px', letterSpacing: '-0.02em', fontWeight: '700' }], 'title-md': ['18px', { lineHeight: '24px', letterSpacing: '-0.01em', fontWeight: '600' }] } } } }</script><style>
+    body {
+      min-height: 100vh;
+      touch-action: pan-y;
+      -webkit-overflow-scrolling: touch;
+    }
+  </style>
+</head><body class="bg-background font-body-md text-on-surface antialiased flex flex-col min-h-screen h-auto overflow-y-auto overflow-x-hidden w-full pb-32"><header class="fixed top-0 w-full z-40 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter flex items-center justify-between gap-space-sm max-w-2xl mx-auto w-full"><div class="flex items-center gap-space-xs min-w-0 flex-1"><button onclick="window.location.href='student-dashboard.html'" class="w-9 h-9 flex items-center justify-center rounded-full text-on-surface hover:bg-surface-container active:scale-95 transition-all cursor-pointer mr-1" aria-label="Back to Dashboard"><span class="material-symbols-outlined text-[20px]">arrow_back</span></button><img alt="SmartMess Brand Logo" class="h-8 w-auto object-contain flex-shrink-0 cursor-pointer" onclick="window.location.href='student-dashboard.html'" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJchqQzWw_3HFe5_So0ytjoL5bkm9xmolQOvjRt-InirpsPCFUmcZC8KqvJzzuTuaWl-ws3R57t_jCtWw11rLZ5NHouTiBmMu5JjsRxx4YvzTB2Fx4IHLkn_290ZM6vCOIVaITkEmlX8QjmVFaKhLi0ZrrbogPdfs-Aiygjnq0AiApYmllfE1qrw4lMUqGyyK26or9kDcUR3-g2uADmPFpaRAo-3_o-v7pJ5GAUneN1TdJCG_rgVcD"/><div class="flex flex-col min-w-0 cursor-pointer" onclick="window.location.href='student-dashboard.html'"><span class="font-label-sm text-label-sm text-primary uppercase tracking-wider leading-none">SmartMess</span><span class="font-title-md text-title-md text-on-surface truncate leading-tight">Live Queue</span></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed shadow-[0_0_12px_rgba(245,158,11,0.25)]"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-container animate-pulse"></span><span class="font-label-sm text-label-sm uppercase tracking-wide">49% Moderate</span></div><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container active:scale-95 transition-all" id="notif-btn"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface" id="notif-badge"></span></button><button class="w-11 h-11 flex items-center justify-center active:scale-95 transition-all" id="profile-btn"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-sm ring-2 ring-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABB43DNrDcn0k4XImqtFDgCkemDToE5ry5NDjme949CMZ86Q5DWwpcOcPb98PEx7USmw-s-mXs5GycS0JO7lk5__Fbg6g9g3deOT9OAcmeVXVmzJoEaG46TrY1IqinvI3igMs-1-Hcih48ziWibiUiUwxcJ_5v314f9pbfOJYlsNuypEg1pFvrhsxiulXwMheMAMKL8JjShoeNleaV15imKUERHi568NnscwfXtwCIbXd538UOyVJC"/></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-32 bg-surface min-h-screen h-auto"><div class="flex flex-col w-full">
+<div class="px-margin space-y-space-lg pb-space-xl max-w-2xl mx-auto w-full">
+<!-- Title Section -->
+<div class="space-y-space-xs mt-space-sm">
+<div class="flex items-center justify-between">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Live Mess Queue</h1>
+<button class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed text-label-sm font-label-sm uppercase tracking-wider active:scale-95 transition-all" id="status-live-pill">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-ping"></span>
+          Realtime Feed
+        </button>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">See the crowd before you walk to the dining hall.</p>
+</div>
+<!-- Active Virtual Queue Boarding Pass -->
+<div class="relative bg-surface-container-lowest rounded-xl shadow-md overflow-hidden transition-all duration-300" id="queue-card">
+<!-- Top Teal Banner Accent -->
+<div class="bg-primary text-on-primary px-space-md py-3 flex items-center justify-between transition-colors" id="card-header">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">airplane_ticket</span>
+<span class="font-label-sm text-label-sm tracking-widest uppercase">SmartMess Virtual Queue Pass</span>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-semibold animate-pulse" id="ticket-badge">
+          ● Waiting in Queue
+        </span>
+</div>
+<!-- Ticket Core Details -->
+<div class="p-space-md space-y-space-md">
+<div class="flex items-baseline justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider" id="pos-label">Your Position</span>
+<div class="flex items-center gap-2">
+<span class="font-display-lg text-display-lg text-primary transition-all" id="ticket-pos">#38</span>
+<span class="font-label-md text-label-md px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface" id="ticket-lane">Lane B2</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Estimated Call</span>
+<p class="font-title-md text-title-md text-tertiary font-bold" id="ticket-eta">1:18 PM</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant" id="ticket-remaining">~7 mins remaining</p>
+</div>
+</div>
+<!-- Stepper Visualizer -->
+<div class="bg-surface-container-low p-space-sm rounded-lg space-y-2 transition-all" id="stepper-box">
+<div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant">
+<span id="people-ahead">People ahead: <strong class="text-on-surface font-semibold">31 students</strong></span>
+<span id="step-count">Step 2 of 4</span>
+</div>
+<!-- Progress Line with Dots -->
+<div class="relative flex items-center justify-between px-2 pt-1 pb-2">
+<div class="absolute left-4 right-4 h-1 bg-surface-variant -z-0"></div>
+<div class="absolute left-4 w-1/3 h-1 bg-primary -z-0 transition-all duration-500" id="progress-bar-fill"></div>
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[14px]">done</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary mt-1 font-bold">#45</span>
+</div>
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-6 h-6 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-sm text-label-sm ring-4 ring-primary-fixed/40 transition-all" id="user-dot-marker">
+<span class="w-2 h-2 rounded-full bg-primary-fixed"></span>
+</div>
+<span class="font-label-sm text-label-sm text-primary mt-1 font-bold" id="user-dot-label">#38 (You)</span>
+</div>
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-5 h-5 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">#20</span>
+</div>
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-5 h-5 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[12px]">restaurant</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Turn</span>
+</div>
+</div>
+</div>
+<!-- Barcode / Ticket Bottom Perforation -->
+<div class="flex flex-row items-center gap-4 bg-surface-container-lowest p-space-sm rounded-lg overflow-hidden w-full border border-dashed border-outline-variant" id="barcode-box">
+<!-- Stylized Barcode SVG -->
+<div class="flex-1 space-y-1">
+<svg class="w-full h-11 text-on-surface" fill="currentColor" viewbox="0 0 220 44">
+<rect height="44" width="3" x="0" y="0"></rect>
+<rect height="44" width="2" x="5" y="0"></rect>
+<rect height="44" width="5" x="9" y="0"></rect>
+<rect height="44" width="1" x="16" y="0"></rect>
+<rect height="44" width="4" x="20" y="0"></rect>
+<rect height="44" width="2" x="27" y="0"></rect>
+<rect height="44" width="6" x="32" y="0"></rect>
+<rect height="44" width="2" x="40" y="0"></rect>
+<rect height="44" width="3" x="45" y="0"></rect>
+<rect height="44" width="5" x="50" y="0"></rect>
+<rect height="44" width="2" x="58" y="0"></rect>
+<rect height="44" width="4" x="63" y="0"></rect>
+<rect height="44" width="1" x="70" y="0"></rect>
+<rect height="44" width="6" x="74" y="0"></rect>
+<rect height="44" width="2" x="83" y="0"></rect>
+<rect height="44" width="4" x="88" y="0"></rect>
+<rect height="44" width="2" x="95" y="0"></rect>
+<rect height="44" width="5" x="100" y="0"></rect>
+<rect height="44" width="2" x="108" y="0"></rect>
+<rect height="44" width="3" x="113" y="0"></rect>
+<rect height="44" width="6" x="119" y="0"></rect>
+<rect height="44" width="2" x="128" y="0"></rect>
+<rect height="44" width="4" x="133" y="0"></rect>
+<rect height="44" width="3" x="140" y="0"></rect>
+<rect height="44" width="1" x="146" y="0"></rect>
+<rect height="44" width="5" x="150" y="0"></rect>
+<rect height="44" width="3" x="158" y="0"></rect>
+<rect height="44" width="2" x="164" y="0"></rect>
+<rect height="44" width="6" x="169" y="0"></rect>
+<rect height="44" width="3" x="178" y="0"></rect>
+<rect height="44" width="2" x="184" y="0"></rect>
+<rect height="44" width="5" x="190" y="0"></rect>
+<rect height="44" width="2" x="198" y="0"></rect>
+<rect height="44" width="4" x="203" y="0"></rect>
+<rect height="44" width="2" x="210" y="0"></rect>
+<rect height="44" width="5" x="215" y="0"></rect>
+</svg>
+<p class="font-label-sm text-label-sm text-center text-outline tracking-widest">SMM-Q-2024-0038-NX</p>
+</div>
+<!-- Micro QR Token -->
+<button aria-label="Expand QR code" class="w-14 h-14 rounded-lg bg-surface-container flex items-center justify-center flex-shrink-0 text-primary p-1 active:scale-95 transition-transform" id="qr-btn">
+<span class="material-symbols-outlined text-[36px]">qr_code_2</span>
+</button>
+</div>
+<!-- Ticket Actions -->
+<div class="flex flex-wrap sm:flex-nowrap items-center gap-space-sm pt-1 w-full">
+<button class="flex-1 flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg active:scale-95 transition-all shadow-sm" id="refresh-pos-btn">
+<span class="material-symbols-outlined text-[18px]">sync</span>
+<span id="refresh-btn-text">Refresh Position</span>
+</button>
+<button class="flex-1 sm:flex-initial flex items-center justify-center py-2.5 px-4 rounded-lg bg-surface-container-high text-error font-label-lg text-label-lg active:scale-95 transition-all hover:bg-error-container whitespace-nowrap" id="leave-queue-btn">
+            Leave Queue
+          </button>
+</div>
+</div>
+<div class="bg-surface-container px-space-md py-2 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm" id="ticket-footnote">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">info</span>
+<span id="footnote-text">Virtual reservation placeholder for fast campus queue flow.</span>
+</div>
+<button class="flex items-center gap-1 font-label-sm text-primary font-bold active:scale-95 transition-all hover:underline ml-2 flex-shrink-0" id="remind-me-btn">
+<span class="material-symbols-outlined text-[14px]">notifications_active</span>
+<span id="remind-btn-text">Remind Me</span>
+</button>
+</div>
+</div>
+<!-- Real-time Hall Capacity Meter Card -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Hall A Occupancy</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface" id="capacity-heading">147 / 300 Capacity</h2>
+</div>
+<button class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm shadow-[0_0_12px_rgba(245,158,11,0.25)] active:scale-95 transition-all" id="capacity-badge-btn">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span id="capacity-status-text">49% MODERATE</span>
+</button>
+</div>
+<!-- Capacity Gauge Track -->
+<div class="space-y-1.5">
+<div class="w-full h-3 rounded-full bg-surface-container overflow-hidden flex">
+<div class="h-full bg-primary transition-all duration-500" id="capacity-fill" style="width: 49%"></div>
+</div>
+<div class="flex justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span class="">0 (Empty)</span>
+<span class="text-tertiary font-bold" id="active-diners-label">147 Active Diners</span>
+<span class="">300 (Full)</span>
+</div>
+</div>
+<!-- Three-Tier Status Indicator Grid -->
+<div class="grid grid-cols-1 gap-2 pt-1" id="tier-grid">
+<!-- Low Tier -->
+<button class="tier-card w-full text-left flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low opacity-60 active:scale-[0.98] transition-all" data-tier="low">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-semibold">Low (0–40%)</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">0–3 min wait • Fast entry</p>
+</div>
+</div>
+<span class="tier-indicator font-label-sm text-label-sm text-on-surface-variant">Clear</span>
+</button>
+<!-- Moderate Tier (Active) -->
+<button class="tier-card w-full text-left flex items-center justify-between p-2.5 rounded-lg bg-tertiary-fixed/30 shadow-sm active:scale-[0.98] transition-all" data-tier="moderate">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary animate-ping"></span>
+<div>
+<div class="flex items-center gap-1.5">
+<p class="font-label-md text-label-md text-on-surface font-bold">Moderate (41–75%)</p>
+<span class="font-label-sm text-label-sm px-1.5 py-0.2 rounded bg-tertiary text-on-tertiary uppercase">Active Now</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">6–8 min wait • 32 people in line</p>
+</div>
+</div>
+<span class="tier-indicator material-symbols-outlined text-tertiary text-[20px]">check_circle</span>
+</button>
+<!-- High Tier -->
+<button class="tier-card w-full text-left flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low opacity-60 active:scale-[0.98] transition-all" data-tier="high">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+<div>
+<p class="font-label-md text-label-md text-on-surface font-semibold">High (76–100%)</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">12–20+ min wait • Peak rush</p>
+</div>
+</div>
+<span class="tier-indicator font-label-sm text-label-sm text-on-surface-variant">Congested</span>
+</button>
+</div>
+</div>
+<!-- Live AI Vision Camera Stream Card -->
+<div class="bg-inverse-surface text-inverse-on-surface rounded-xl overflow-hidden shadow-lg space-y-0">
+<!-- Camera Stream Header -->
+<div class="p-3 bg-surface-variant/10 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-inverse-on-surface uppercase tracking-wider font-bold" id="camera-label">[AI CAMERA 01 - MESS HALL NORTH]</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-surface-variant/30 text-inverse-on-surface active:scale-95 transition-all flex items-center gap-1" id="toggle-camera-btn">
+<span class="material-symbols-outlined text-[14px]">videocam</span>
+<span>Switch Cam</span>
+</button>
+<button class="font-label-sm text-label-sm px-2.5 py-1 rounded bg-secondary text-on-secondary active:scale-95 transition-all flex items-center gap-1" id="sim-person-btn">
+<span class="material-symbols-outlined text-[14px]">person_add</span>
+<span>+Simulate</span>
+</button>
+</div>
+</div>
+<!-- Simulated AI Vision Viewport with Overlays -->
+<div class="relative w-full aspect-video min-h-[190px] bg-slate-900 overflow-hidden flex items-center justify-center">
+<!-- Background Dining Hall Ambient Photo -->
+<div class="absolute inset-0 bg-cover bg-center opacity-40" data-alt="A crowded modern university dining hall cafeteria view from an overhead security camera perspective with dining tables students walking around trays and food counters under warm modern interior lighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBtPJYe-HYv7etrAqjrFJU7tDyVosef8SQmQ_dh4HFImVJDhxzMOr_zmpyA46YHBz2CR16IVpyWmf4QjoX8UsCWFmXLtwsRJZ_jZjuXsEgME3UpYBcAd3Exhs-44XSF2UzrSX59wv1SA8QBTUt6Pt6Nwb-aUP8KIS5qEzAB4UIvAT03jhLjeKVt9JOVzoED-JO4rw2g4Ti8H2Lf3lJKWlI-0ouBW3pRlTpePpTBMDlfyKIW8EWaSHfw')">
+</div>
+<!-- Virtual Tripwire Overlay Lines -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
+<!-- Entry Tripwire Line -->
+<line stroke="#10b981" stroke-dasharray="4,4" stroke-width="2" x1="15%" x2="15%" y1="10%" y2="90%"></line>
+<text fill="#10b981" font-family="Plus Jakarta Sans" font-size="10" font-weight="700" x="18%" y="24">TRIPWIRE: ENTRY GATE</text>
+<!-- Exit Tripwire Line -->
+<line stroke="#f59e0b" stroke-dasharray="4,4" stroke-width="2" x1="85%" x2="85%" y1="10%" y2="90%"></line>
+<text fill="#f59e0b" font-family="Plus Jakarta Sans" font-size="10" font-weight="700" x="58%" y="24">TRIPWIRE: TRAY RETURN</text>
+</svg>
+<!-- Simulated Student Bounding Boxes (YOLO) -->
+<div id="bbox-container">
+<div class="absolute left-1/4 top-16 w-14 h-24 border-2 border-secondary-fixed-dim rounded pointer-events-none flex flex-col justify-between p-0.5 transition-all duration-300">
+<span class="font-label-sm text-label-sm bg-secondary text-on-secondary px-1 py-0.2 rounded text-[8px] w-fit">ID #142 (98%)</span>
+<span class="font-label-sm text-label-sm text-secondary-fixed text-[8px] self-end">SERVING</span>
+</div>
+<div class="absolute left-1/2 top-20 w-12 h-20 border-2 border-tertiary-fixed-dim rounded pointer-events-none flex flex-col justify-between p-0.5 transition-all duration-300">
+<span class="font-label-sm text-label-sm bg-tertiary text-on-tertiary px-1 py-0.2 rounded text-[8px] w-fit">ID #143 (94%)</span>
+<span class="font-label-sm text-label-sm text-tertiary-fixed text-[8px] self-end">SEATED</span>
+</div>
+<div class="absolute right-1/4 top-14 w-12 h-24 border-2 border-secondary-fixed-dim rounded pointer-events-none flex flex-col justify-between p-0.5 transition-all duration-300">
+<span class="font-label-sm text-label-sm bg-secondary text-on-secondary px-1 py-0.2 rounded text-[8px] w-fit">ID #144 (91%)</span>
+<span class="font-label-sm text-label-sm text-secondary-fixed text-[8px] self-end">WALKING</span>
+</div>
+</div>
+<!-- Telemetry Bottom Bar Overlay -->
+<div class="absolute bottom-2 left-2 right-2 flex items-center justify-between bg-inverse-surface/85 backdrop-blur-md px-2.5 py-1.5 rounded-lg text-inverse-on-surface">
+<div class="flex items-center gap-3 font-label-sm text-label-sm">
+<span class="text-secondary-fixed" id="cam-enter-stat">ENTERING: +14</span>
+<span class="text-tertiary-fixed" id="cam-exit-stat">EXITING: -9</span>
+<span class="font-bold text-inverse-on-surface" id="cam-net-stat">NET: 147</span>
+</div>
+<span class="font-label-sm text-label-sm text-inverse-on-surface/70" id="cam-tag-stat">Gate Cam 01</span>
+</div>
+</div>
+<!-- Engine Badge -->
+<div class="p-2.5 bg-surface-variant/5 flex items-center justify-between text-inverse-on-surface font-label-sm text-label-sm">
+<div class="flex items-center gap-1.5 text-secondary-fixed">
+<span class="material-symbols-outlined text-[16px]">psychology</span>
+<span class="">OpenCV 4.8 + YOLOv8 Detection Active</span>
+</div>
+<span class="text-inverse-on-surface/60" id="cam-updated-text">Updated 1s ago</span>
+</div>
+</div>
+<!-- Hourly Crowd Analytics & Forecast Chart -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Predictive Trend</span>
+<h2 class="font-title-md text-title-md text-on-surface">Lunch Crowd Timeline</h2>
+</div>
+<!-- Time range filter tabs -->
+<div class="flex items-center gap-1 bg-surface-container p-0.5 rounded-full" id="time-tabs">
+<button class="time-tab-btn font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-primary text-on-primary font-semibold transition-all" data-period="today">Today</button>
+<button class="time-tab-btn font-label-sm text-label-sm px-2.5 py-1 rounded-full text-on-surface-variant hover:text-on-surface transition-all" data-period="yesterday">Past</button>
+<button class="time-tab-btn font-label-sm text-label-sm px-2.5 py-1 rounded-full text-on-surface-variant hover:text-on-surface transition-all" data-period="weekly">Week</button>
+</div>
+</div>
+<!-- Bar Chart Visualization -->
+<div class="space-y-2">
+<div class="grid grid-cols-6 items-end gap-2 h-36 pt-6 px-1" id="chart-bars">
+<!-- 12:00 PM -->
+<button class="chart-bar-item flex flex-col items-center gap-1 h-full justify-end active:scale-95 transition-all w-full text-left" data-pct="35%" data-time="12:00">
+<span class="font-label-sm text-label-sm text-on-surface-variant">35%</span>
+<div class="w-full rounded-t-lg bg-surface-container-high transition-all" style="height: 35%"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">12:00</span>
+</button>
+<!-- 12:30 PM -->
+<button class="chart-bar-item flex flex-col items-center gap-1 h-full justify-end active:scale-95 transition-all w-full text-left" data-pct="62%" data-time="12:30">
+<span class="font-label-sm text-label-sm text-on-surface-variant">62%</span>
+<div class="w-full rounded-t-lg bg-tertiary-fixed transition-all" style="height: 62%"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">12:30</span>
+</button>
+<!-- 1:00 PM (Peak) -->
+<button class="chart-bar-item flex flex-col items-center gap-1 h-full justify-end active:scale-95 transition-all w-full text-left" data-pct="91%" data-time="1:00">
+<span class="font-label-sm text-label-sm text-error font-bold">91%</span>
+<div class="w-full rounded-t-lg bg-error transition-all" style="height: 91%"></div>
+<span class="font-label-sm text-label-sm text-error font-bold mt-1">1:00</span>
+</button>
+<!-- 1:30 PM -->
+<button class="chart-bar-item flex flex-col items-center gap-1 h-full justify-end active:scale-95 transition-all w-full text-left" data-pct="78%" data-time="1:30">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">78%</span>
+<div class="w-full rounded-t-lg bg-tertiary-fixed-dim transition-all" style="height: 78%"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">1:30</span>
+</button>
+<!-- 2:00 PM (Best Time) -->
+<button class="chart-bar-item flex flex-col items-center gap-1 h-full justify-end relative active:scale-95 transition-all w-full text-left" data-pct="32%" data-time="2:00">
+<span class="absolute -top-3 px-1 py-0.2 rounded bg-secondary text-on-secondary text-[8px] font-bold">BEST</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">32%</span>
+<div class="w-full rounded-t-lg bg-secondary transition-all" style="height: 32%"></div>
+<span class="font-label-sm text-label-sm text-secondary font-bold mt-1">2:00</span>
+</button>
+<!-- 2:30 PM -->
+<button class="chart-bar-item flex flex-col items-center gap-1 h-full justify-end active:scale-95 transition-all w-full text-left" data-pct="18%" data-time="2:30">
+<span class="font-label-sm text-label-sm text-on-surface-variant">18%</span>
+<div class="w-full rounded-t-lg bg-surface-container-high transition-all" style="height: 18%"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">2:30</span>
+</button>
+</div>
+</div>
+<!-- Smart Recommendation Callout Banner -->
+<div class="flex items-start gap-3 p-space-sm rounded-lg bg-secondary-fixed/30 text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[20px] text-secondary flex-shrink-0 mt-0.5">tips_and_updates</span>
+<div class="flex-1">
+<p class="font-label-md text-label-md text-secondary font-bold">Optimal Dining Window</p>
+<p class="font-body-sm text-body-sm text-on-surface">Best time to eat: <strong class="font-semibold text-secondary">2:05 PM – 2:30 PM</strong> (Expected wait &lt; 2 mins with open hot bar seating).</p>
+</div>
+</div>
+</div>
+<!-- Quick Help & Dietary Hall Rules -->
+<div class="flex items-center justify-between p-space-sm rounded-xl bg-surface-container-low text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-primary">verified_user</span>
+<span class="font-label-md text-label-md text-on-surface">Need special dietary lane access?</span>
+</div>
+<button class="font-label-sm text-label-sm text-primary font-bold hover:underline active:scale-95 transition-all" id="switch-lane-btn">
+        Switch Line
+      </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Modern Toast Notification Container -->
+<div class="fixed top-20 left-1/2 -translate-x-1/2 z-50 px-4 py-2.5 rounded-full bg-inverse-surface text-inverse-on-surface font-label-md text-label-md shadow-xl flex items-center gap-2 pointer-events-none opacity-0 translate-y-[-10px] transition-all duration-300 max-w-[90vw] whitespace-nowrap" id="toast">
+<span class="material-symbols-outlined text-[18px] text-inverse-primary" id="toast-icon">info</span>
+<span id="toast-message">Notification</span>
+</div>
+<nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.06)] border-t border-surface-container"><div class="flex items-center justify-around h-16 px-gutter max-w-md mx-auto" id="bottom-nav"><a class="nav-item flex flex-col items-center justify-center flex-1 h-full py-1 text-on-surface-variant hover:text-on-surface transition-colors min-w-[44px] active:scale-95" data-tab="dashboard" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-label-sm mt-0.5">Home</span></a><a aria-current="page" class="nav-item flex flex-col items-center justify-center flex-1 h-full py-1 transition-colors min-w-[44px] text-primary font-bold active:scale-95" data-tab="live-queue" href="#"><span class="material-symbols-outlined text-[22px]">qr_code_scanner</span><span class="font-label-sm text-label-sm mt-0.5">Queue</span></a><a class="nav-item flex flex-col items-center justify-center flex-1 h-full py-1 text-on-surface-variant hover:text-on-surface transition-colors min-w-[44px] active:scale-95" data-tab="dining-menu" href="#"><span class="material-symbols-outlined text-[22px]">restaurant_menu</span><span class="font-label-sm text-label-sm mt-0.5">Menu</span></a><a class="nav-item flex flex-col items-center justify-center flex-1 h-full py-1 text-on-surface-variant hover:text-on-surface transition-colors min-w-[44px] active:scale-95" data-tab="feedback-and-vote" href="#"><span class="material-symbols-outlined text-[22px]">rate_review</span><span class="font-label-sm text-label-sm mt-0.5">Vote</span></a><a class="nav-item flex flex-col items-center justify-center flex-1 h-full py-1 text-on-surface-variant hover:text-on-surface transition-colors min-w-[44px] active:scale-95" data-tab="profile-settings" href="#"><span class="material-symbols-outlined text-[22px]">manage_accounts</span><span class="font-label-sm text-label-sm mt-0.5">Profile</span></a></div></nav>
+<script>
+  (function() {
+    let currentPosition = 38;
+    let studentsAhead = 31;
+    let inQueue = true;
+    let reminderActive = false;
+    let activeCam = 1;
+    let toastTimeout;
+
+    // Toast helper
+    function showToast(message, icon = 'check_circle') {
+      const toast = document.getElementById('toast');
+      const toastMsg = document.getElementById('toast-message');
+      const toastIcon = document.getElementById('toast-icon');
+      if (!toast || !toastMsg || !toastIcon) return;
+
+      toastMsg.textContent = message;
+      toastIcon.textContent = icon;
+      toast.classList.remove('opacity-0', 'translate-y-[-10px]');
+      toast.classList.add('opacity-100', 'translate-y-0');
+
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', 'translate-y-[-10px]');
+      }, 2600);
+    }
+
+    // Refresh Position Button
+    const refreshBtn = document.getElementById('refresh-pos-btn');
+    const refreshBtnText = document.getElementById('refresh-btn-text');
+    const ticketPos = document.getElementById('ticket-pos');
+    const peopleAhead = document.getElementById('people-ahead');
+    const userDotLabel = document.getElementById('user-dot-label');
+    const ticketEta = document.getElementById('ticket-eta');
+    const ticketRemaining = document.getElementById('ticket-remaining');
+
+    if (refreshBtn) {
+      refreshBtn.addEventListener('click', function() {
+        if (!inQueue) {
+          showToast('Please re-join the queue first', 'info');
+          return;
+        }
+        const icon = this.querySelector('.material-symbols-outlined');
+        if (icon) icon.classList.add('animate-spin');
+        refreshBtn.disabled = true;
+        if (refreshBtnText) refreshBtnText.textContent = 'Updating...';
+
+        setTimeout(() => {
+          if (icon) icon.classList.remove('animate-spin');
+          refreshBtn.disabled = false;
+          if (refreshBtnText) refreshBtnText.textContent = 'Refresh Position';
+
+          if (currentPosition > 1) {
+            currentPosition -= 1;
+            studentsAhead = Math.max(0, studentsAhead - 1);
+            if (ticketPos) ticketPos.textContent = '#' + currentPosition;
+            if (userDotLabel) userDotLabel.textContent = '#' + currentPosition + ' (You)';
+            if (peopleAhead) peopleAhead.innerHTML = 'People ahead: <strong class="text-on-surface font-semibold">' + studentsAhead + ' students</strong>';
+            const mins = Math.max(1, Math.round(studentsAhead * 0.22));
+            if (ticketRemaining) ticketRemaining.textContent = '~' + mins + ' mins remaining';
+            showToast('Queue updated: 1 person served! Now #' + currentPosition, 'check_circle');
+          } else {
+            showToast('It is your turn now! Proceed to counter.', 'restaurant');
+          }
+        }, 600);
+      });
+    }
+
+    // Leave Queue / Rejoin Queue Button
+    const leaveBtn = document.getElementById('leave-queue-btn');
+    const ticketBadge = document.getElementById('ticket-badge');
+    const cardHeader = document.getElementById('card-header');
+    const posLabel = document.getElementById('pos-label');
+
+    if (leaveBtn) {
+      leaveBtn.addEventListener('click', function() {
+        if (inQueue) {
+          inQueue = false;
+          leaveBtn.textContent = 'Re-join Queue';
+          leaveBtn.className = 'flex-1 sm:flex-initial flex items-center justify-center py-2.5 px-4 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg active:scale-95 transition-all shadow-sm whitespace-nowrap';
+          if (ticketBadge) {
+            ticketBadge.textContent = 'Left Queue';
+            ticketBadge.className = 'font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-semibold';
+          }
+          if (cardHeader) {
+            cardHeader.className = 'bg-surface-container-high text-on-surface px-space-md py-3 flex items-center justify-between transition-colors';
+          }
+          if (ticketPos) ticketPos.textContent = '--';
+          if (posLabel) posLabel.textContent = 'Status: Inactive';
+          if (ticketRemaining) ticketRemaining.textContent = 'Pass currently inactive';
+          showToast('You left the queue. Click Re-join to take a pass.', 'logout');
+        } else {
+          inQueue = true;
+          currentPosition = 39;
+          studentsAhead = 32;
+          leaveBtn.textContent = 'Leave Queue';
+          leaveBtn.className = 'flex-1 sm:flex-initial flex items-center justify-center py-2.5 px-4 rounded-lg bg-surface-container-high text-error font-label-lg text-label-lg active:scale-95 transition-all hover:bg-error-container whitespace-nowrap';
+          if (ticketBadge) {
+            ticketBadge.textContent = '● Waiting in Queue';
+            ticketBadge.className = 'font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-semibold animate-pulse';
+          }
+          if (cardHeader) {
+            cardHeader.className = 'bg-primary text-on-primary px-space-md py-3 flex items-center justify-between transition-colors';
+          }
+          if (ticketPos) ticketPos.textContent = '#' + currentPosition;
+          if (posLabel) posLabel.textContent = 'Your Position';
+          if (userDotLabel) userDotLabel.textContent = '#' + currentPosition + ' (You)';
+          if (peopleAhead) peopleAhead.innerHTML = 'People ahead: <strong class="text-on-surface font-semibold">' + studentsAhead + ' students</strong>';
+          if (ticketRemaining) ticketRemaining.textContent = '~7 mins remaining';
+          showToast('Welcome back! You are assigned position #' + currentPosition, 'confirmation_number');
+        }
+      });
+    }
+
+    // Remind Me Toggle
+    const remindBtn = document.getElementById('remind-me-btn');
+    const remindBtnText = document.getElementById('remind-btn-text');
+    if (remindBtn) {
+      remindBtn.addEventListener('click', function() {
+        reminderActive = !reminderActive;
+        if (reminderActive) {
+          if (remindBtnText) remindBtnText.textContent = 'Reminder Set';
+          remindBtn.className = 'flex items-center gap-1 font-label-sm text-secondary font-bold active:scale-95 transition-all hover:underline ml-2 flex-shrink-0';
+          showToast('Reminder enabled! We will ping you 3 min before.', 'alarm_on');
+        } else {
+          if (remindBtnText) remindBtnText.textContent = 'Remind Me';
+          remindBtn.className = 'flex items-center gap-1 font-label-sm text-primary font-bold active:scale-95 transition-all hover:underline ml-2 flex-shrink-0';
+          showToast('Reminder cancelled.', 'notifications_off');
+        }
+      });
+    }
+
+    // Camera Switch and Simulate Detection
+    const toggleCamBtn = document.getElementById('toggle-camera-btn');
+    const simPersonBtn = document.getElementById('sim-person-btn');
+    const cameraLabel = document.getElementById('camera-label');
+    const camTagStat = document.getElementById('cam-tag-stat');
+    const camUpdatedText = document.getElementById('cam-updated-text');
+    const bboxContainer = document.getElementById('bbox-container');
+
+    if (toggleCamBtn) {
+      toggleCamBtn.addEventListener('click', function() {
+        activeCam = activeCam === 1 ? 2 : 1;
+        if (cameraLabel) {
+          cameraLabel.textContent = activeCam === 1 ? '[AI CAMERA 01 - MESS HALL NORTH]' : '[AI CAMERA 02 - MESS HALL SOUTH]';
+        }
+        if (camTagStat) {
+          camTagStat.textContent = 'Gate Cam 0' + activeCam;
+        }
+        showToast('Switched to Mess Hall Camera 0' + activeCam, 'videocam');
+      });
+    }
+
+    if (simPersonBtn) {
+      simPersonBtn.addEventListener('click', function() {
+        const netStat = document.getElementById('cam-net-stat');
+        const enterStat = document.getElementById('cam-enter-stat');
+        if (bboxContainer) {
+          const newId = Math.floor(Math.random() * 800) + 100;
+          const leftOffsets = ['20%', '35%', '55%', '70%'];
+          const randomLeft = leftOffsets[Math.floor(Math.random() * leftOffsets.length)];
+          const newBox = document.createElement('div');
+          newBox.className = 'absolute top-18 w-12 h-22 border-2 border-secondary-fixed rounded pointer-events-none flex flex-col justify-between p-0.5 transition-all duration-300 animate-pulse';
+          newBox.style.left = randomLeft;
+          newBox.style.top = '4.5rem';
+          newBox.innerHTML = '<span class="font-label-sm text-label-sm bg-secondary text-on-secondary px-1 py-0.2 rounded text-[8px] w-fit">ID #' + newId + ' (97%)</span><span class="font-label-sm text-label-sm text-secondary-fixed text-[8px] self-end">ARRIVING</span>';
+          bboxContainer.appendChild(newBox);
+          setTimeout(() => { newBox.remove(); }, 3500);
+        }
+        if (netStat) netStat.textContent = 'NET: 148';
+        if (enterStat) enterStat.textContent = 'ENTERING: +15';
+        if (camUpdatedText) camUpdatedText.textContent = 'Updated just now';
+        showToast('Simulated student entry logged by YOLOv8', 'person_add');
+      });
+    }
+
+    // Time Range Tabs Switcher
+    const timeTabs = document.querySelectorAll('.time-tab-btn');
+    timeTabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+        timeTabs.forEach(t => {
+          t.className = 'time-tab-btn font-label-sm text-label-sm px-2.5 py-1 rounded-full text-on-surface-variant hover:text-on-surface transition-all';
+        });
+        this.className = 'time-tab-btn font-label-sm text-label-sm px-2.5 py-1 rounded-full bg-primary text-on-primary font-semibold transition-all';
+        const period = this.getAttribute('data-period');
+        showToast('Loaded ' + period + ' analytics overview', 'analytics');
+      });
+    });
+
+    // Chart Bar interactive tap
+    const chartBars = document.querySelectorAll('.chart-bar-item');
+    chartBars.forEach(bar => {
+      bar.addEventListener('click', function() {
+        const time = this.getAttribute('data-time');
+        const pct = this.getAttribute('data-pct');
+        showToast(time + ' forecast: ' + pct + ' expected capacity', 'schedule');
+      });
+    });
+
+    // Tier Cards click
+    const tierCards = document.querySelectorAll('.tier-card');
+    tierCards.forEach(card => {
+      card.addEventListener('click', function() {
+        const tier = this.getAttribute('data-tier');
+        showToast('Viewing details for ' + tier.toUpperCase() + ' occupancy tier', 'tune');
+      });
+    });
+
+    // Switch lane button
+    const switchLaneBtn = document.getElementById('switch-lane-btn');
+    if (switchLaneBtn) {
+      switchLaneBtn.addEventListener('click', function() {
+        const ticketLane = document.getElementById('ticket-lane');
+        if (ticketLane) {
+          const current = ticketLane.textContent;
+          const next = current === 'Lane B2' ? 'Dietary A1' : 'Lane B2';
+          ticketLane.textContent = next;
+          showToast('Switched to ' + next + ' queue pass', 'swap_horiz');
+        }
+      });
+    }
+
+    // Header buttons
+    const notifBtn = document.getElementById('notif-btn');
+    if (notifBtn) {
+      notifBtn.addEventListener('click', function() {
+        const badge = document.getElementById('notif-badge');
+        if (badge) badge.classList.toggle('hidden');
+        showToast('Notifications: 2 queue alerts available', 'notifications');
+      });
+    }
+
+    const profileBtn = document.getElementById('profile-btn');
+    if (profileBtn) {
+      profileBtn.addEventListener('click', function() {
+        showToast('Signed in as Alex student (Meal ID #8839)', 'account_circle');
+      });
+    }
+
+    const qrBtn = document.getElementById('qr-btn');
+    if (qrBtn) {
+      qrBtn.addEventListener('click', function() {
+        showToast('Barcode ready to scan at lane scanner', 'qr_code');
+      });
+    }
+
+    const livePill = document.getElementById('status-live-pill');
+    if (livePill) {
+      livePill.addEventListener('click', function() {
+        showToast('Real-time feed streaming smoothly at 30fps', 'stream');
+      });
+    }
+
+    // Bottom Navigation tab switching
+    const navItems = document.querySelectorAll('.nav-item');
+    navItems.forEach(item => {
+      item.addEventListener('click', function(e) {
+        e.preventDefault();
+        const tab = this.getAttribute('data-tab');
+        if (tab === 'dashboard') {
+          window.location.href = 'student-dashboard.html';
+        } else if (tab === 'live-queue') {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else if (tab === 'dining-menu') {
+          window.location.href = 'dining-menu-ratings.html';
+        } else if (tab === 'feedback-and-vote') {
+          window.location.href = 'dining-menu-ratings.html';
+        } else if (tab === 'profile-settings') {
+          window.location.href = 'student-dashboard.html';
+        }
+      });
+    });
+
+  })();
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../js/supabase.js"></script>
+<script src="../js/smartmess-nav.js"></script>
+</body></html>

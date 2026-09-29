@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>
+@layer base {
+  html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #faf8ff;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-y;
+    overflow-y: auto;
+    height: auto;
+    min-height: 100vh;
+  }
+  body {
+    -webkit-tap-highlight-color: transparent;
+  }
+  .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); }
+  .pt-safe { padding-top: env(safe-area-inset-top, 0px); }
+}
+::-webkit-scrollbar { display: none; }
+</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: 'class', theme: { extend: { colors: { 'outline-variant': '#bcc9c6', 'on-secondary-fixed-variant': '#005137', 'outline': '#6d7a77', 'on-background': '#131b2e', 'secondary-fixed-dim': '#68dba9', 'surface-variant': '#dae2fd', 'inverse-primary': '#6bd8cb', 'primary-fixed': '#89f5e7', 'secondary': '#006c4a', 'on-secondary-fixed': '#002114', 'surface-container-low': '#f2f3ff', 'secondary-fixed': '#85f8c4', 'secondary-container': '#82f5c1', 'tertiary-fixed-dim': '#ffb95f', 'on-surface': '#131b2e', 'surface-container-highest': '#dae2fd', 'tertiary-container': '#a36700', 'tertiary': '#825100', 'surface': '#faf8ff', 'inverse-on-surface': '#eef0ff', 'surface-container-lowest': '#ffffff', 'surface-bright': '#faf8ff', 'surface-container': '#eaedff', 'surface-dim': '#d2d9f4', 'primary-container': '#008378', 'on-error': '#ffffff', 'on-surface-variant': '#3d4947', 'on-error-container': '#93000a', 'on-primary': '#ffffff', 'background': '#faf8ff', 'on-secondary-container': '#00714e', 'primary-fixed-dim': '#6bd8cb', 'error-container': '#ffdad6', 'on-primary-fixed-variant': '#005049', 'surface-container-high': '#e2e7ff', 'on-tertiary': '#ffffff', 'on-tertiary-fixed': '#2a1700', 'primary': '#00685f', 'on-tertiary-container': '#fffbff', 'tertiary-fixed': '#ffddb8', 'on-primary-container': '#f4fffc', 'inverse-surface': '#283044', 'on-tertiary-fixed-variant': '#653e00', 'surface-tint': '#006a61', 'error': '#ba1a1a', 'on-secondary': '#ffffff', 'on-primary-fixed': '#00201d' }, borderRadius: { 'DEFAULT': '0.25rem', 'lg': '0.5rem', 'xl': '0.75rem', 'full': '9999px' }, spacing: { 'space-xs': '0.25rem', 'space-md': '1rem', 'gutter-tablet': '1.25rem', 'space-lg': '1.5rem', 'margin-tablet': '1.5rem', 'space-xl': '2rem', 'gutter': '1rem', 'gutter-desktop': '1.5rem', 'space-sm': '0.5rem', 'margin': '1rem', 'margin-desktop': '2.5rem' }, fontFamily: { 'body-md': ['Plus Jakarta Sans'], 'display-lg': ['Plus Jakarta Sans'], 'label-md': ['Plus Jakarta Sans'], 'headline-xl': ['Plus Jakarta Sans'], 'label-sm': ['Plus Jakarta Sans'], 'body-lg': ['Plus Jakarta Sans'], 'body-sm': ['Plus Jakarta Sans'], 'headline-lg-mobile': ['Plus Jakarta Sans'], 'label-lg': ['Plus Jakarta Sans'], 'headline-lg': ['Plus Jakarta Sans'], 'title-md': ['Plus Jakarta Sans'] }, fontSize: { 'body-md': ['14px', { lineHeight: '20px', letterSpacing: '0em', fontWeight: '400' }], 'display-lg': ['40px', { lineHeight: '48px', letterSpacing: '-0.03em', fontWeight: '800' }], 'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0.02em', fontWeight: '600' }], 'headline-xl': ['32px', { lineHeight: '40px', letterSpacing: '-0.025em', fontWeight: '700' }], 'label-sm': ['10px', { lineHeight: '14px', letterSpacing: '0.04em', fontWeight: '700' }], 'body-lg': ['16px', { lineHeight: '24px', letterSpacing: '0em', fontWeight: '400' }], 'body-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.01em', fontWeight: '400' }], 'headline-lg-mobile': ['20px', { lineHeight: '28px', letterSpacing: '-0.015em', fontWeight: '700' }], 'label-lg': ['14px', { lineHeight: '18px', letterSpacing: '0.01em', fontWeight: '600' }], 'headline-lg': ['24px', { lineHeight: '32px', letterSpacing: '-0.02em', fontWeight: '700' }], 'title-md': ['18px', { lineHeight: '24px', letterSpacing: '-0.01em', fontWeight: '600' }] } } } }</script></head><body class="bg-background font-body-md text-on-surface antialiased flex flex-col min-h-screen relative overflow-y-auto"><header class="fixed top-0 w-full z-40 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter flex items-center justify-between gap-space-sm max-w-2xl mx-auto"><div class="flex items-center gap-space-sm min-w-0 flex-1 cursor-pointer" onclick="window.location.href='welcome-role-portal.html'" title="Return to Role Portal"><img alt="SmartMess Brand Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1W5wACBPKb-MwWP32Aqiy6WlG_g3AU2iXTFii8Vil3UP9eyIM4TMdUU_py1PA_85FDc8tlB9inZhFzaoTdhfvq9gpAR6OHVekvvkNUhmI2Xh_LRuoihNHzy1_ky9oOxHpqVIY_atk7Fkrf6Zpdd2wb4XmdlbNfa7xP8qnlkWR6737f4ch4S807dR3r6AAX2H6AJHd09VIwmDw0M5l0BiMoJ8rlJTOKXfoqiHAp3B-C0AAOwcv5w8y73U6Y"/><div class="flex flex-col min-w-0"><span class="font-label-sm text-label-sm text-primary uppercase tracking-wider leading-none">SmartMess</span><span class="font-title-md text-title-md text-on-surface truncate leading-tight">Dashboard</span></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><button class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed shadow-[0_0_12px_rgba(245,158,11,0.25)] transition-transform active:scale-95 cursor-pointer" id="crowdStatusHeaderBtn" onclick="window.location.href='live-queue-ticket.html'"><span class="w-1.5 h-1.5 rounded-full bg-tertiary-container animate-pulse"></span><span class="font-label-sm text-label-sm uppercase tracking-wide">49% Moderate</span></button><div class="relative"><button aria-label="Notifications" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface hover:bg-surface-container active:scale-95 transition-all" id="notifBellBtn"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-error ring-2 ring-surface" id="notifBadge"></span></button><!-- Notification Dropdown Menu --><div class="hidden absolute right-0 mt-2 w-80 max-w-[90vw] bg-surface-container-lowest rounded-2xl shadow-xl border border-outline-variant/30 p-3 z-50 space-y-2" id="notifDropdown"><div class="flex items-center justify-between pb-2 border-b border-surface-container"><span class="font-label-lg text-label-lg font-bold text-on-surface">Campus Alerts</span><span class="font-label-sm text-label-sm text-primary cursor-pointer hover:underline" id="markAllReadBtn">Clear</span></div><div class="space-y-2"><div class="p-2.5 rounded-xl bg-surface-container-low flex items-start gap-2.5 text-left"><span class="material-symbols-outlined text-[20px] text-tertiary mt-0.5">restaurant_menu</span><div><p class="font-label-md text-label-md font-bold text-on-surface">Menu Special Live</p><p class="font-body-sm text-body-sm text-on-surface-variant">Chef's special Paneer Butter Masala added for lunch today.</p><span class="font-label-sm text-[10px] text-outline">10m ago</span></div></div><div class="p-2.5 rounded-xl bg-surface-container-low flex items-start gap-2.5 text-left"><span class="material-symbols-outlined text-[20px] text-secondary mt-0.5">access_time</span><div><p class="font-label-md text-label-md font-bold text-on-surface">Low Rush Prediction</p><p class="font-body-sm text-body-sm text-on-surface-variant">Recommended slot is 2:05 PM - 2:25 PM with &lt;3 min wait.</p><span class="font-label-sm text-[10px] text-outline">25m ago</span></div></div></div></div></div><button class="w-11 h-11 flex items-center justify-center rounded-full active:scale-95 transition-transform" id="profileHeaderBtn"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-sm ring-1 ring-primary/20" src="https://lh3.googleusercontent.com/aida/AEtjO1UFXDlRV93JEzANN6_o2-9TN-SRxNZEgb6zEqXGV4mubyaMXX6OonCDIsYxtvTZel-et-Ram5pmyp-y7iBf-WXMFCnE_E6-y8dWoYMoE5HGdxxHutFivDu3lxgkD8qt2uLRn3sRzt-qLTje5mulR68qNjFPo6KLyCaoIsT9E82wDJaDQ7zX9Am7CTCZkIrUpdMQfy-cveI0HaTlppAItVQCKYWEs-OCXWsoC8AJMO-5ZJRYWAvF4eS1-aU"/></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-20 bg-surface min-h-screen pb-36 overflow-y-auto"><div class="flex flex-col w-full">
+<!-- Content Container with strict mobile padding rhythm -->
+<div class="px-margin space-y-space-md mx-auto w-full max-w-2xl">
+<!-- Student Greeting & Digital Meal Pass Pill -->
+<div class="pt-space-sm flex items-start justify-between gap-space-sm">
+<div class="min-w-0">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight">Good morning, Utkarsh 👋</h2>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="material-symbols-outlined text-[15px] text-primary">apartment</span>
+<p class="font-label-md text-label-md text-on-surface-variant">Hostel Block B</p>
+<span class="text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm bg-surface-container-high text-primary px-2 py-0.5 rounded-full font-bold">Pass #SM-2024</span>
+</div>
+</div>
+<button class="flex-shrink-0 flex items-center gap-1 bg-surface-container hover:bg-surface-container-high active:scale-[0.97] transition-all px-3 py-2 rounded-xl text-primary font-label-md text-label-md shadow-sm" id="showPassModalBtn">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+<span class="">Pass</span>
+</button>
+</div>
+<!-- Active Service Broadcast Banner -->
+<div class="relative overflow-hidden rounded-xl bg-gradient-to-r from-primary/10 via-secondary-container/20 to-tertiary-fixed/30 p-space-sm shadow-sm flex items-center justify-between gap-space-sm cursor-pointer hover:opacity-95 active:scale-[0.99] transition-all" id="lunchAlertBanner">
+<div class="flex items-center gap-space-sm min-w-0 flex-1">
+<div class="w-8 h-8 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center flex-shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[18px] animate-bounce">notifications_active</span>
+</div>
+<div class="min-w-0 flex-1">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-primary uppercase font-bold tracking-wider">Lunch Alert</span>
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Now Serving</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface truncate font-semibold">Paneer Butter Masala &amp; Chicken Curry!</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-primary flex-shrink-0">arrow_forward</span>
+</div>
+<!-- PRIMARY HERO CARD: LIVE MESS QUEUE & RADAR -->
+<section class="bg-surface-container-lowest rounded-2xl p-space-md shadow-md space-y-space-md relative overflow-hidden transition-all duration-300" id="liveQueueSection">
+<!-- Ambient aura glow overlay -->
+<div class="absolute -top-12 -right-12 w-44 h-44 bg-tertiary-fixed/40 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Card Top: Title & Status Chip -->
+<div class="flex items-start justify-between gap-space-xs relative z-10">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">radar</span>
+<h3 class="font-title-md text-title-md text-on-surface">Live Mess Queue</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Central Dining Hall • Real-Time AI Sensor</p>
+</div>
+<!-- Status Pill with Pulsing Amber Dot -->
+<div class="flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed shadow-[0_0_12px_rgba(245,158,11,0.25)] flex-shrink-0 cursor-pointer active:scale-95 transition-transform" id="liveOccupancyBadge">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-ping"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-wide font-bold" id="occupancyText">49% Busy</span>
+</div>
+</div>
+<!-- Live Key Metrics Mosaic Grid -->
+<div class="grid grid-cols-3 gap-2 relative z-10">
+<!-- Metric 1: Inside Mess -->
+<div class="bg-surface-container-low rounded-xl p-2.5 flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary">group</span>
+<span class="font-label-sm text-label-sm">Inside</span>
+</div>
+<div class="mt-2">
+<div class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface leading-none font-extrabold" id="metricInside">147</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">/ 300 seats</div>
+</div>
+</div>
+<!-- Metric 2: Est Wait Time -->
+<div class="bg-surface-container-low rounded-xl p-2.5 flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-tertiary">timelapse</span>
+<span class="font-label-sm text-label-sm">Wait Time</span>
+</div>
+<div class="mt-2">
+<div class="font-headline-lg-mobile text-headline-lg-mobile text-tertiary leading-none font-extrabold" id="metricWait">6-8</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">minutes</div>
+</div>
+</div>
+<!-- Metric 3: Counter Queue -->
+<div class="bg-surface-container-low rounded-xl p-2.5 flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">transfer_within_a_station</span>
+<span class="font-label-sm text-label-sm">In Line</span>
+</div>
+<div class="mt-2">
+<div class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface leading-none font-extrabold" id="metricLine">~32</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">students</div>
+</div>
+</div>
+</div>
+<!-- Capacity Progress Track & Split Thresholds -->
+<div class="space-y-1.5 relative z-10">
+<div class="flex justify-between items-center font-label-sm text-label-sm">
+<span class="text-on-surface font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            Occupancy Gauge
+          </span>
+<span class="text-tertiary font-bold" id="capacityRatio">147 / 300 (49%)</span>
+</div>
+<!-- Multi-tone styled progress bar -->
+<div class="w-full h-3 bg-surface-container rounded-full overflow-hidden relative shadow-inner">
+<div class="h-full rounded-full transition-all duration-700 ease-out bg-gradient-to-r from-secondary via-secondary to-tertiary-fixed-dim" id="capacityProgressBar" style="width: 49%;"></div>
+</div>
+<!-- Threshold scale markings -->
+<div class="flex justify-between items-center font-label-sm text-label-sm text-outline px-0.5 pt-0.5">
+<span class="text-secondary font-medium">Low &lt;40%</span>
+<span class="text-tertiary font-bold">● Moderate 41-75%</span>
+<span class="text-error font-medium">High &gt;76%</span>
+</div>
+</div>
+<!-- Live Action Buttons -->
+<div class="flex flex-col sm:flex-row gap-2 relative z-10 pt-1">
+<button class="w-full flex-1 h-12 bg-primary hover:bg-primary-container text-on-primary font-label-lg text-label-lg rounded-xl flex items-center justify-center gap-2 shadow-sm transition-all duration-200 active:scale-[0.98] cursor-pointer" id="joinQueueBtn">
+<span class="material-symbols-outlined text-[20px] text-primary-fixed">bolt</span>
+<span id="joinQueueBtnText">Join Virtual Queue (#38 Available)</span>
+</button>
+<button class="w-full sm:w-auto px-4 h-12 bg-surface-container text-on-surface font-label-md text-label-md rounded-xl flex items-center justify-center gap-2 hover:bg-surface-container-high active:scale-[0.98] transition-all flex-shrink-0 cursor-pointer" id="cameraMonitorBtn">
+<span class="material-symbols-outlined text-[18px] text-primary">videocam</span>
+<span class="">View AI Camera</span>
+</button>
+</div>
+<!-- Live Virtual Pass Inline Toast (Revealed upon joining queue) -->
+<div class="hidden bg-secondary-container text-on-secondary-container rounded-xl p-space-sm flex items-center justify-between gap-space-sm transition-all duration-300 animate-fadeIn" id="activeQueueBanner">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold font-label-md text-label-md flex-shrink-0">
+            #38
+          </div>
+<div class="min-w-0">
+<p class="font-label-md text-label-md font-bold truncate">Queue Joined! Ticket #38</p>
+<p class="font-body-sm text-body-sm truncate text-on-secondary-container/90">Est 6 mins • Counter Line B</p>
+</div>
+</div>
+<button class="bg-secondary text-on-secondary px-3 py-1.5 rounded-lg font-label-sm text-label-sm font-bold flex items-center gap-1 shadow-sm active:scale-95 transition-transform cursor-pointer" id="showQrBtn">
+<span class="material-symbols-outlined text-[16px]">qr_code_2</span>
+<span class="">QR Pass</span>
+</button>
+</div>
+</section>
+<!-- SMART QUEUE RECOMMENDATION CALLOUT -->
+<div class="bg-surface-container-low rounded-2xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-start gap-2.5">
+<div class="w-7 h-7 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">lightbulb</span>
+</div>
+<div class="space-y-1">
+<span class="font-label-sm text-label-sm uppercase font-bold text-tertiary tracking-wide">Smart AI Insight</span>
+<p class="font-body-sm text-body-sm text-on-surface leading-snug">
+            Mess crowd is moderating! Expected low rush <strong class="text-secondary font-semibold">(0–3 min wait)</strong> between <span class="underline decoration-secondary/50 font-medium">2:05 PM – 2:25 PM</span>.
+          </p>
+</div>
+</div>
+<div class="flex items-center justify-end">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container active:scale-95 font-label-md text-label-md shadow-sm transition-all cursor-pointer" id="remindBtn">
+<span class="material-symbols-outlined text-[16px] text-tertiary">alarm</span>
+<span class="" id="remindBtnText">Remind Me at 2:05 PM</span>
+</button>
+</div>
+</div>
+<!-- TODAY'S MENU SNAPSHOT SECTION -->
+<section class="bg-surface-container-lowest rounded-2xl p-space-md shadow-md space-y-space-md" id="diningMenuSection">
+<!-- Section Header -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[20px] text-primary">restaurant</span>
+<h3 class="font-title-md text-title-md text-on-surface">Today's Menu</h3>
+</div>
+<button class="font-label-md text-label-md text-primary font-bold hover:underline flex items-center cursor-pointer active:scale-95 transition-transform" id="fullWeeklyMenuBtn">
+          Full Weekly Menu
+          <span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+<!-- Meal Category Filter Tabs -->
+<div class="flex gap-2 overflow-x-auto pb-1" id="mealFilterContainer" style="scrollbar-width: none;">
+<button class="meal-tab-btn px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md whitespace-nowrap flex items-center gap-1 cursor-pointer transition-all active:scale-95" data-meal="breakfast">
+<span class="material-symbols-outlined text-[14px] text-outline">check_circle</span>
+          Breakfast (Done)
+        </button>
+<button class="meal-tab-btn active-tab px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold whitespace-nowrap shadow-sm flex items-center gap-1.5 cursor-pointer transition-all active:scale-95" data-meal="lunch">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-fixed animate-pulse"></span>
+          Lunch (Active)
+        </button>
+<button class="meal-tab-btn px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md whitespace-nowrap cursor-pointer transition-all active:scale-95" data-meal="snacks">
+          Snacks (4:30 PM)
+        </button>
+<button class="meal-tab-btn px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md whitespace-nowrap cursor-pointer transition-all active:scale-95" data-meal="dinner">
+          Dinner (7:30 PM)
+        </button>
+</div>
+<!-- Dynamic Dish Item Cards Container -->
+<div class="space-y-2.5" id="dishListContainer">
+<!-- Dish 1: Paneer Butter Masala -->
+<div class="dish-card bg-surface-container-low rounded-xl p-2.5 flex items-center justify-between gap-space-sm hover:bg-surface-container transition-colors cursor-pointer" data-dish="Paneer Butter Masala">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-4 h-4 rounded-sm bg-surface-container-lowest flex items-center justify-center p-0.5 flex-shrink-0 shadow-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5">
+<p class="font-body-md text-body-md font-bold text-on-surface truncate">Paneer Butter Masala</p>
+<span class="font-label-sm text-label-sm bg-secondary-fixed text-on-secondary-fixed px-1.5 py-0.2 rounded font-bold">Veg</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Cottage cheese cubes in rich tomato-cashew gravy</p>
+</div>
+</div>
+<div class="flex items-center gap-1 text-tertiary bg-tertiary-fixed/50 px-2 py-1 rounded-md flex-shrink-0 font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="">4.6</span>
+</div>
+</div>
+<!-- Dish 2: Chicken Curry -->
+<div class="dish-card bg-surface-container-low rounded-xl p-2.5 flex items-center justify-between gap-space-sm hover:bg-surface-container transition-colors cursor-pointer" data-dish="Chicken Curry (Special)">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-4 h-4 rounded-sm bg-surface-container-lowest flex items-center justify-center p-0.5 flex-shrink-0 shadow-xs">
+<span class="w-2 h-2 rounded-xs bg-error transform rotate-45"></span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5">
+<p class="font-body-md text-body-md font-bold text-on-surface truncate">Chicken Curry (Special)</p>
+<span class="font-label-sm text-label-sm bg-error-container text-on-error-container px-1.5 py-0.2 rounded font-bold">Non-Veg</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Slow-cooked homestyle spicy coriander gravy</p>
+</div>
+</div>
+<div class="flex items-center gap-1 text-tertiary bg-tertiary-fixed/50 px-2 py-1 rounded-md flex-shrink-0 font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="">4.4</span>
+</div>
+</div>
+<!-- Dish 3: Dal Tadka & Jeera Rice -->
+<div class="dish-card bg-surface-container-low rounded-xl p-2.5 flex items-center justify-between gap-space-sm hover:bg-surface-container transition-colors cursor-pointer" data-dish="Dal Tadka &amp; Steamed Jeera Rice">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-4 h-4 rounded-sm bg-surface-container-lowest flex items-center justify-center p-0.5 flex-shrink-0 shadow-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5">
+<p class="font-body-md text-body-md font-bold text-on-surface truncate">Dal Tadka &amp; Steamed Jeera Rice</p>
+<span class="font-label-sm text-label-sm bg-secondary-fixed text-on-secondary-fixed px-1.5 py-0.2 rounded font-bold">Veg</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Yellow lentils tempered with cumin, garlic &amp; ghee</p>
+</div>
+</div>
+<div class="flex items-center gap-1 text-tertiary bg-tertiary-fixed/50 px-2 py-1 rounded-md flex-shrink-0 font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="">4.2</span>
+</div>
+</div>
+<!-- Dish 4: Accompaniments -->
+<div class="dish-card bg-surface-container-low rounded-xl p-2.5 flex items-center justify-between gap-space-sm hover:bg-surface-container transition-colors cursor-pointer" data-dish="Phulka &amp; Curd">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-4 h-4 rounded-sm bg-surface-container-lowest flex items-center justify-center p-0.5 flex-shrink-0 shadow-xs">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<div class="min-w-0">
+<p class="font-body-md text-body-md font-bold text-on-surface truncate">Hot Whole Wheat Phulka (4 pcs) &amp; Curd</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Freshly made, served with green salad &amp; lemon</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-outline px-2">Unlimited</span>
+</div>
+</div>
+<!-- Quick Interactive Rating Button -->
+<div class="pt-1 flex items-center justify-between gap-2">
+<button class="flex-1 h-11 bg-surface-container hover:bg-surface-container-high text-primary font-label-md text-label-md rounded-xl flex items-center justify-center gap-1.5 transition-all active:scale-[0.98] cursor-pointer" id="rateMealBtn">
+<span class="material-symbols-outlined text-[18px]">rate_review</span>
+<span id="rateMealBtnText">Rate Today's Lunch</span>
+</button>
+<button class="h-11 px-3.5 bg-surface-container text-on-surface-variant rounded-xl flex items-center justify-center hover:text-on-surface hover:bg-surface-container-high active:scale-95 transition-all cursor-pointer" id="shareMenuBtn" title="Share Menu">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</button>
+</div>
+</section>
+<!-- STUDENT QUICK SHORTCUTS & ENGAGEMENT HUB -->
+<section class="space-y-space-sm pb-space-sm" id="communitySection">
+<div class="flex items-center justify-between px-0.5">
+<h4 class="font-label-lg text-label-lg text-on-surface font-bold">Community &amp; Governance</h4>
+<span class="font-label-sm text-label-sm text-primary font-semibold">Active Voting</span>
+</div>
+<!-- Shortcut 1: Monthly Menu Voting Hero Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-md shadow-sm hover:shadow-md transition-all active:scale-[0.99] cursor-pointer relative overflow-hidden" id="menuPollCard">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center text-title-md flex-shrink-0">
+              🗳️
+            </div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<p class="font-title-md text-title-md font-bold text-on-surface truncate">Monthly Menu Poll</p>
+<span class="font-label-sm text-label-sm bg-error-container text-on-error-container px-2 py-0.5 rounded-full font-bold">3 Days Left</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Vote for next Sunday's Special Dinner &amp; Evening Snacks menu.</p>
+<div class="flex items-center gap-3 mt-2 text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-primary">how_to_vote</span>
+<span id="voteCountDisplay">1,248 votes cast</span>
+</span>
+<span class="">•</span>
+<span class="text-secondary font-bold">Biryani vs Fried Rice</span>
+</div>
+</div>
+</div>
+<button class="flex-shrink-0 w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-colors" id="pollCardActionBtn">
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Dual Grid Shortcuts -->
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Shortcut 2: Food Complaints -->
+<button class="text-left bg-surface-container-lowest rounded-2xl p-space-sm shadow-sm hover:bg-surface-container-low transition-all active:scale-[0.98] flex flex-col justify-between h-28 cursor-pointer" id="complaintBtn">
+<div class="flex items-center justify-between w-full">
+<div class="w-8 h-8 rounded-lg bg-surface-container text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px] text-error">campaign</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-outline">north_east</span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg font-bold text-on-surface leading-tight">Food Complaints</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Quick escalation ticket</p>
+</div>
+</button>
+<!-- Shortcut 3: Suggest a Dish -->
+<button class="text-left bg-surface-container-lowest rounded-2xl p-space-sm shadow-sm hover:bg-surface-container-low transition-all active:scale-[0.98] flex flex-col justify-between h-28 cursor-pointer" id="suggestDishBtn">
+<div class="flex items-center justify-between w-full">
+<div class="w-8 h-8 rounded-lg bg-surface-container text-on-surface flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px] text-tertiary">tips_and_updates</span>
+</div>
+<span class="material-symbols-outlined text-[16px] text-outline">north_east</span>
+</div>
+<div>
+<p class="font-label-lg text-label-lg font-bold text-on-surface leading-tight">Suggest a Dish</p>
+<p class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Chef review committee</p>
+</div>
+</button>
+</div>
+</section>
+</div>
+</div>
+<!-- LIVE AI CAMERA BOTTOM DRAWER / MODAL -->
+<div class="hidden fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm flex flex-col justify-end p-margin pb-safe transition-all duration-300" id="cameraModal">
+<div class="bg-surface-container-lowest rounded-3xl p-space-md shadow-2xl max-w-md mx-auto w-full space-y-space-md transform transition-transform">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-error animate-ping"></span>
+<span class="font-title-md text-title-md text-on-surface font-bold">AI Queue Counter Cam</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant active:scale-90 transition-transform cursor-pointer" id="closeCameraModal">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Camera Frame Simulation -->
+<div class="relative rounded-2xl overflow-hidden bg-inverse-surface h-48 flex items-center justify-center">
+<img class="w-full h-full object-cover opacity-85" data-alt="High angle view of a modern university cafeteria dining hall with tidy rows of tables students queued orderly at food counters soft clean lighting teal design accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpDeWa_bqZnI7PF2DdXAkYeV31kR47LAVEYwYzIq9UDtKX7bnX3xW7H5dAfZ9J5bgm4RGTMoBRkUHaHiUZwTtnh5qhUKtqc989qoWVwQ2igQt2V0KzE2mxioRWkscEnqsgN0RjJGiYo90oWEr8Y3JG74lXJMz6S8cZaQFW5PN2osZzybw5S6GChRvQV2uhDWoOhaNEkNWv88qHt-zMZ04qKht58X8aCjnqDmwgwdMIhegPbhcBNoie"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30"></div>
+<!-- AI Computer Vision HUD Overlays -->
+<div class="absolute top-3 left-3 flex items-center gap-1.5 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full text-white font-label-sm text-label-sm font-mono">
+<span class="material-symbols-outlined text-[14px] text-secondary">videocam</span>
+<span class="">CAM_HALL_B • 1080P LIVE</span>
+</div>
+<div class="absolute top-3 right-3 bg-secondary/90 text-on-secondary px-2.5 py-1 rounded-full font-label-sm text-label-sm font-bold">
+            32 HEADS DETECTED
+          </div>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between text-white font-label-sm text-label-sm">
+<span class="">Crowd Density: Moderate</span>
+<span class="font-mono text-tertiary-fixed">Flow Rate: 4.2 ppl/min</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-center">
+          Privacy Assured: Video feeds are anonymized and processed edge-side by campus sensor gateways.
+        </p>
+<button class="w-full h-11 bg-primary text-on-primary font-label-md text-label-md font-bold rounded-xl shadow-sm active:scale-[0.98] transition-transform cursor-pointer" id="dismissCameraBtn">
+          Return to Dashboard
+        </button>
+</div>
+</div>
+<!-- DIGITAL PASS / QR BOTTOM SHEET MODAL -->
+<div class="hidden fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm flex flex-col justify-end p-margin pb-safe transition-all duration-300" id="qrModal">
+<div class="bg-surface-container-lowest rounded-3xl p-space-md shadow-2xl max-w-md mx-auto w-full space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h4 class="font-title-md text-title-md text-on-surface font-bold">Turnstile Fast-Pass</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Hostel Block B • Utkarsh Sharma</p>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant active:scale-90 transition-transform cursor-pointer" id="closeQrModal">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- High-contrast Inverted Scanner Display -->
+<div class="bg-surface-container-high p-6 rounded-2xl flex flex-col items-center justify-center space-y-3">
+<div class="w-48 h-48 bg-white p-3 rounded-xl shadow-inner flex items-center justify-center">
+<!-- Simulated Crisp SVG QR Barcode -->
+<svg class="w-full h-full text-on-surface" fill="currentColor" viewbox="0 0 100 100">
+<rect fill="none" height="28" rx="2" stroke="currentColor" stroke-width="6" width="28" x="5" y="5"></rect>
+<rect height="12" width="12" x="13" y="13"></rect>
+<rect fill="none" height="28" rx="2" stroke="currentColor" stroke-width="6" width="28" x="67" y="5"></rect>
+<rect height="12" width="12" x="75" y="13"></rect>
+<rect fill="none" height="28" rx="2" stroke="currentColor" stroke-width="6" width="28" x="5" y="67"></rect>
+<rect height="12" width="12" x="13" y="75"></rect>
+<rect height="22" width="8" x="42" y="10"></rect>
+<rect height="8" width="22" x="10" y="42"></rect>
+<rect height="16" width="16" x="42" y="42"></rect>
+<rect height="8" width="22" x="68" y="42"></rect>
+<rect height="22" width="8" x="42" y="68"></rect>
+<rect height="12" width="12" x="68" y="68"></rect>
+<rect height="8" width="8" x="84" y="84"></rect>
+</svg>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+<span class="font-label-sm text-label-sm font-mono tracking-widest text-on-surface font-bold">TOKEN: SM-B-8931-EXP-14:30</span>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-3 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">timer</span>
+<span class="font-label-md text-label-md text-on-surface">Valid for Next Service</span>
+</div>
+<span class="font-label-md text-label-md font-bold text-secondary">38 mins left</span>
+</div>
+<button class="w-full h-11 bg-primary text-on-primary font-label-md text-label-md font-bold rounded-xl shadow-sm active:scale-[0.98] transition-transform cursor-pointer" id="dismissQrBtn">
+          Done
+        </button>
+</div>
+</div>
+<!-- INTERACTIVE RATING MODAL -->
+<div class="hidden fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm flex flex-col justify-end p-margin pb-safe transition-all duration-300" id="ratingModal">
+<div class="bg-surface-container-lowest rounded-3xl p-space-md shadow-2xl max-w-md mx-auto w-full space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h4 class="font-title-md text-title-md text-on-surface font-bold" id="ratingModalTitle">Rate Today's Lunch</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Help the mess team improve taste &amp; hygiene</p>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant active:scale-90 transition-transform cursor-pointer" id="closeRatingModal">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<!-- Interactive 5 Star Bar -->
+<div class="flex justify-center items-center gap-3 py-2" id="starRatingGroup">
+<button class="star-rating-btn text-[36px] text-tertiary-fixed-dim hover:text-tertiary transition-transform active:scale-125 focus:outline-none" data-index="1">★</button>
+<button class="star-rating-btn text-[36px] text-tertiary-fixed-dim hover:text-tertiary transition-transform active:scale-125 focus:outline-none" data-index="2">★</button>
+<button class="star-rating-btn text-[36px] text-tertiary-fixed-dim hover:text-tertiary transition-transform active:scale-125 focus:outline-none" data-index="3">★</button>
+<button class="star-rating-btn text-[36px] text-tertiary-fixed-dim hover:text-tertiary transition-transform active:scale-125 focus:outline-none" data-index="4">★</button>
+<button class="star-rating-btn text-[36px] text-surface-container-high hover:text-tertiary transition-transform active:scale-125 focus:outline-none" data-index="5">★</button>
+</div>
+<div class="flex flex-wrap justify-center gap-2" id="ratingTagsGroup">
+<button class="rating-tag px-3 py-1.5 bg-surface-container text-on-surface-variant rounded-full font-label-sm text-label-sm border border-transparent transition-all active:scale-95 cursor-pointer">Hot &amp; Fresh 🔥</button>
+<button class="rating-tag px-3 py-1.5 bg-surface-container text-on-surface-variant rounded-full font-label-sm text-label-sm border border-transparent transition-all active:scale-95 cursor-pointer">Great Paneer 🧀</button>
+<button class="rating-tag px-3 py-1.5 bg-surface-container text-on-surface-variant rounded-full font-label-sm text-label-sm border border-transparent transition-all active:scale-95 cursor-pointer">Fast Line ⚡</button>
+<button class="rating-tag px-3 py-1.5 bg-surface-container text-on-surface-variant rounded-full font-label-sm text-label-sm border border-transparent transition-all active:scale-95 cursor-pointer">Needs Salt 🧂</button>
+</div>
+<button class="w-full h-11 bg-primary text-on-primary font-label-md text-label-md font-bold rounded-xl shadow-sm active:scale-[0.98] transition-transform cursor-pointer" id="submitRatingBtn">
+          Submit Anonymous Feedback
+</button>
+</div>
+</div>
+<!-- FLOATING FEEDBACK TOAST NOTIFICATION CONTAINER -->
+<div class="fixed top-20 left-1/2 transform -translate-x-1/2 z-50 flex flex-col items-center pointer-events-none gap-2 w-full max-w-sm px-4" id="toastContainer"></div>
+</main>
+<!-- BOTTOM NAVIGATION -->
+<nav class="fixed bottom-0 w-full z-40 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.06)] border-t border-surface-container/60" data-active-classes="text-primary font-bold">
+<div class="flex items-center justify-around h-16 px-gutter mx-auto max-w-2xl" id="bottomNav">
+<button class="nav-tab active-nav-tab flex flex-col items-center justify-center flex-1 h-full py-1 text-primary font-bold active:scale-95 transition-all cursor-pointer" data-path="dashboard">
+<span class="material-symbols-outlined text-[22px]">dashboard</span>
+<span class="font-label-sm text-label-sm mt-0.5">Home</span>
+</button>
+<button class="nav-tab flex flex-col items-center justify-center flex-1 h-full py-1 text-on-surface-variant hover:text-on-surface active:scale-95 transition-all cursor-pointer" data-path="live-queue">
+<span class="material-symbols-outlined text-[22px]">qr_code_scanner</span>
+<span class="font-label-sm text-label-sm mt-0.5">Queue</span>
+</button>
+<button class="nav-tab flex flex-col items-center justify-center flex-1 h-full py-1 text-on-surface-variant hover:text-on-surface active:scale-95 transition-all cursor-pointer" data-path="dining-menu">
+<span class="material-symbols-outlined text-[22px]">restaurant_menu</span>
+<span class="font-label-sm text-label-sm mt-0.5">Menu</span>
+</button>
+<button class="nav-tab flex flex-col items-center justify-center flex-1 h-full py-1 text-on-surface-variant hover:text-on-surface active:scale-95 transition-all cursor-pointer" data-path="feedback-and-vote">
+<span class="material-symbols-outlined text-[22px]">rate_review</span>
+<span class="font-label-sm text-label-sm mt-0.5">Vote</span>
+</button>
+<button class="nav-tab flex flex-col items-center justify-center flex-1 h-full py-1 text-on-surface-variant hover:text-on-surface active:scale-95 transition-all cursor-pointer" data-path="profile-settings">
+<span class="material-symbols-outlined text-[22px]">manage_accounts</span>
+<span class="font-label-sm text-label-sm mt-0.5">Profile</span>
+</button>
+</div>
+</nav>
+<script>
+  // UI Interactive Handlers and Touch Optimizations
+  document.addEventListener('DOMContentLoaded', () => {
+    // 1. Toast Notification Helper
+    const showToast = (message, icon = 'check_circle', bg = 'bg-inverse-surface', text = 'text-inverse-on-surface') => {
+      const container = document.getElementById('toastContainer');
+      if (!container) return;
+      const toast = document.createElement('div');
+      toast.className = `${bg} ${text} px-4 py-2.5 rounded-full shadow-xl flex items-center gap-2 pointer-events-auto transition-all duration-300 transform -translate-y-4 opacity-0 text-sm font-semibold font-label-md`;
+      toast.innerHTML = `<span class="material-symbols-outlined text-[18px] text-secondary-fixed">${icon}</span><span>${message}</span>`;
+      container.appendChild(toast);
+      
+      requestAnimationFrame(() => {
+        toast.classList.remove('-translate-y-4', 'opacity-0');
+        toast.classList.add('translate-y-0', 'opacity-100');
+      });
+
+      setTimeout(() => {
+        toast.classList.add('-translate-y-4', 'opacity-0');
+        setTimeout(() => toast.remove(), 300);
+      }, 3200);
+    };
+
+    // 2. Notification Bell & Dropdown
+    const notifBellBtn = document.getElementById('notifBellBtn');
+    const notifDropdown = document.getElementById('notifDropdown');
+    const notifBadge = document.getElementById('notifBadge');
+    const markAllReadBtn = document.getElementById('markAllReadBtn');
+
+    if (notifBellBtn && notifDropdown) {
+      notifBellBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        notifDropdown.classList.toggle('hidden');
+        if (notifBadge) notifBadge.classList.add('hidden');
+      });
+      document.addEventListener('click', (e) => {
+        if (!notifDropdown.contains(e.target) && e.target !== notifBellBtn) {
+          notifDropdown.classList.add('hidden');
+        }
+      });
+    }
+
+    if (markAllReadBtn && notifDropdown) {
+      markAllReadBtn.addEventListener('click', () => {
+        notifDropdown.classList.add('hidden');
+        showToast('All notifications marked as read', 'done_all');
+      });
+    }
+
+    // 3. Header Buttons
+    const crowdStatusBtn = document.getElementById('crowdStatusHeaderBtn');
+    if (crowdStatusBtn) {
+      crowdStatusBtn.addEventListener('click', () => {
+        document.getElementById('liveQueueSection')?.scrollIntoView({ behavior: 'smooth' });
+        showToast('Live Occupancy: 147/300 (Moderate rush)', 'radar');
+      });
+    }
+
+    const profileHeaderBtn = document.getElementById('profileHeaderBtn');
+    if (profileHeaderBtn) {
+      profileHeaderBtn.addEventListener('click', () => {
+        showToast('Profile: Utkarsh Sharma (Hostel B, Room 314)', 'account_circle');
+      });
+    }
+
+    // 4. Join Virtual Queue Interaction
+    const joinBtn = document.getElementById('joinQueueBtn');
+    const joinBtnText = document.getElementById('joinQueueBtnText');
+    const queueBanner = document.getElementById('activeQueueBanner');
+    const metricLine = document.getElementById('metricLine');
+    let hasJoinedQueue = false;
+
+    if (joinBtn && queueBanner) {
+      joinBtn.addEventListener('click', () => {
+        if (hasJoinedQueue) {
+          showToast('Already joined! Your Ticket is #38', 'confirmation_number');
+          return;
+        }
+        joinBtn.classList.add('opacity-75');
+        joinBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin text-primary-fixed">sync</span> <span>Reserving spot...</span>';
+        
+        setTimeout(() => {
+          hasJoinedQueue = true;
+          joinBtn.classList.remove('opacity-75');
+          joinBtn.classList.replace('bg-primary', 'bg-secondary-container');
+          joinBtn.classList.replace('text-on-primary', 'text-on-secondary-container');
+          joinBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span> <span class="font-bold">Queue Joined! Ticket #38</span>';
+          queueBanner.classList.remove('hidden');
+          if (metricLine) metricLine.innerText = '~33';
+          showToast('Joined Virtual Queue! Ticket #38 ready', 'bolt', 'bg-secondary', 'text-on-secondary');
+        }, 550);
+      });
+    }
+
+    // 5. Remind Me Interaction
+    const remindBtn = document.getElementById('remindBtn');
+    const remindText = document.getElementById('remindBtnText');
+    if (remindBtn && remindText) {
+      remindBtn.addEventListener('click', () => {
+        remindBtn.classList.add('bg-secondary-fixed', 'text-on-secondary-fixed');
+        remindText.innerText = 'Reminder Set (2:05 PM) ✓';
+        showToast('Reminder set for 2:05 PM (Low crowd window)', 'alarm_on');
+      });
+    }
+
+    // 6. Meal Menu Filter Tabs & Dishes Data
+    const mealData = {
+      breakfast: [
+        { name: 'Masala Dosa & Sambar', veg: true, tag: 'Veg', desc: 'Crisp golden crepe with spiced potato filling & coconut chutney', rating: '4.7' },
+        { name: 'Idli Vada Combo', veg: true, tag: 'Veg', desc: 'Steamed fluffy rice cakes with crisp medu vada', rating: '4.5' },
+        { name: 'Boiled Eggs & Toast', veg: false, tag: 'Egg', desc: 'Farm-fresh boiled eggs with multigrain toast', rating: '4.3' }
+      ],
+      lunch: [
+        { name: 'Paneer Butter Masala', veg: true, tag: 'Veg', desc: 'Cottage cheese cubes in rich tomato-cashew gravy', rating: '4.6' },
+        { name: 'Chicken Curry (Special)', veg: false, tag: 'Non-Veg', desc: 'Slow-cooked homestyle spicy coriander gravy', rating: '4.4' },
+        { name: 'Dal Tadka & Steamed Jeera Rice', veg: true, tag: 'Veg', desc: 'Yellow lentils tempered with cumin, garlic & ghee', rating: '4.2' },
+        { name: 'Hot Whole Wheat Phulka & Curd', veg: true, tag: 'Unlimited', desc: 'Freshly made, served with green salad & lemon', rating: '4.8' }
+      ],
+      snacks: [
+        { name: 'Crispy Veg Samosa (2 pcs)', veg: true, tag: 'Veg', desc: 'Spiced potato & green peas wrapped in flaky pastry', rating: '4.8' },
+        { name: 'Masala Chai & Ginger Tea', veg: true, tag: 'Hot', desc: 'Freshly brewed Assam tea with crushed cardamom and ginger', rating: '4.9' },
+        { name: 'Sweet Corn Chaat', veg: true, tag: 'Healthy', desc: 'Steamed corn tossed with lime, chaat masala & butter', rating: '4.3' }
+      ],
+      dinner: [
+        { name: 'Hyderabadi Chicken Biryani', veg: false, tag: 'Non-Veg', desc: 'Dum-cooked aromatic basmati rice with marinated chicken & mirchi ka salan', rating: '4.9' },
+        { name: 'Paneer Tikka Biryani', veg: true, tag: 'Veg', desc: 'Char-grilled cottage cheese with spiced saffron rice & raita', rating: '4.6' },
+        { name: 'Gulab Jamun (2 pcs)', veg: true, tag: 'Dessert', desc: 'Soft khoya dumplings dipped in warm saffron-rose syrup', rating: '4.9' }
+      ]
+    };
+
+    const mealTabs = document.querySelectorAll('.meal-tab-btn');
+    const dishContainer = document.getElementById('dishListContainer');
+
+    function renderDishes(mealKey) {
+      if (!dishContainer) return;
+      const items = mealData[mealKey] || mealData.lunch;
+      dishContainer.innerHTML = items.map(dish => `
+        <div class="dish-card bg-surface-container-low rounded-xl p-2.5 flex items-center justify-between gap-space-sm hover:bg-surface-container active:scale-[0.99] transition-all cursor-pointer" data-dish="${dish.name}">
+          <div class="flex items-center gap-space-sm min-w-0">
+            <div class="w-4 h-4 rounded-sm bg-surface-container-lowest flex items-center justify-center p-0.5 flex-shrink-0 shadow-xs">
+              <span class="w-2 h-2 ${dish.veg ? 'rounded-full bg-secondary' : 'rounded-xs bg-error transform rotate-45'}"></span>
+            </div>
+            <div class="min-w-0">
+              <div class="flex items-center gap-1.5">
+                <p class="font-body-md text-body-md font-bold text-on-surface truncate">${dish.name}</p>
+                <span class="font-label-sm text-label-sm ${dish.veg ? 'bg-secondary-fixed text-on-secondary-fixed' : 'bg-error-container text-on-error-container'} px-1.5 py-0.2 rounded font-bold">${dish.tag}</span>
+              </div>
+              <p class="font-body-sm text-body-sm text-on-surface-variant truncate">${dish.desc}</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-1 text-tertiary bg-tertiary-fixed/50 px-2 py-1 rounded-md flex-shrink-0 font-label-sm text-label-sm font-bold">
+            <span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span>${dish.rating}</span>
+          </div>
+        </div>
+      `).join('');
+      attachDishClickHandlers();
+    }
+
+    function attachDishClickHandlers() {
+      document.querySelectorAll('.dish-card').forEach(card => {
+        card.addEventListener('click', () => {
+          const dishName = card.getAttribute('data-dish');
+          openRatingModal(dishName);
+        });
+      });
+    }
+
+    mealTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        mealTabs.forEach(t => {
+          t.className = 'meal-tab-btn px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md whitespace-nowrap cursor-pointer transition-all active:scale-95';
+        });
+        tab.className = 'meal-tab-btn active-tab px-3.5 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md font-bold whitespace-nowrap shadow-sm flex items-center gap-1.5 cursor-pointer transition-all active:scale-95';
+        const meal = tab.getAttribute('data-meal');
+        renderDishes(meal);
+        showToast(`Showing ${tab.innerText.trim()} Menu`, 'restaurant');
+      });
+    });
+
+    // 7. Modals: AI Camera Modal
+    const cameraBtn = document.getElementById('cameraMonitorBtn');
+    const cameraModal = document.getElementById('cameraModal');
+    const closeCamera = document.getElementById('closeCameraModal');
+    const dismissCamera = document.getElementById('dismissCameraBtn');
+    
+    const toggleCamera = (show) => {
+      if (cameraModal) cameraModal.classList.toggle('hidden', !show);
+    };
+    if (cameraBtn) cameraBtn.addEventListener('click', () => {
+      toggleCamera(true);
+      showToast('Connecting to Central Hall Sensor Cam...', 'videocam');
+    });
+    if (closeCamera) closeCamera.addEventListener('click', () => toggleCamera(false));
+    if (dismissCamera) dismissCamera.addEventListener('click', () => toggleCamera(false));
+
+    // 8. Modals: QR & Pass
+    const qrBtn = document.getElementById('showQrBtn');
+    const passModalBtn = document.getElementById('showPassModalBtn');
+    const qrModal = document.getElementById('qrModal');
+    const closeQr = document.getElementById('closeQrModal');
+    const dismissQr = document.getElementById('dismissQrBtn');
+
+    const toggleQr = (show) => {
+      if (qrModal) qrModal.classList.toggle('hidden', !show);
+    };
+    if (qrBtn) qrBtn.addEventListener('click', () => toggleQr(true));
+    if (passModalBtn) passModalBtn.addEventListener('click', () => toggleQr(true));
+    if (closeQr) closeQr.addEventListener('click', () => toggleQr(false));
+    if (dismissQr) dismissQr.addEventListener('click', () => toggleQr(false));
+
+    // 9. Interactive Rating Modal & Star Ratings
+    const rateMealBtn = document.getElementById('rateMealBtn');
+    const ratingModal = document.getElementById('ratingModal');
+    const ratingModalTitle = document.getElementById('ratingModalTitle');
+    const closeRating = document.getElementById('closeRatingModal');
+    const submitRating = document.getElementById('submitRatingBtn');
+    const starBtns = document.querySelectorAll('.star-rating-btn');
+    const ratingTags = document.querySelectorAll('.rating-tag');
+    let currentRating = 4;
+
+    function openRatingModal(dishTitle = "Rate Today's Lunch") {
+      if (ratingModalTitle) ratingModalTitle.innerText = `Rate ${dishTitle}`;
+      if (ratingModal) ratingModal.classList.remove('hidden');
+    }
+
+    if (rateMealBtn) rateMealBtn.addEventListener('click', () => openRatingModal("Today's Lunch"));
+    if (closeRating) closeRating.addEventListener('click', () => ratingModal?.classList.add('hidden'));
+
+    starBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const val = parseInt(btn.getAttribute('data-index') || '5', 10);
+        currentRating = val;
+        starBtns.forEach((b, idx) => {
+          if (idx < val) {
+            b.classList.add('text-tertiary');
+            b.classList.remove('text-surface-container-high', 'text-tertiary-fixed-dim');
+          } else {
+            b.classList.add('text-surface-container-high');
+            b.classList.remove('text-tertiary', 'text-tertiary-fixed-dim');
+          }
+        });
+      });
+    });
+
+    ratingTags.forEach(tag => {
+      tag.addEventListener('click', () => {
+        tag.classList.toggle('bg-primary');
+        tag.classList.toggle('text-on-primary');
+        tag.classList.toggle('bg-surface-container');
+        tag.classList.toggle('text-on-surface-variant');
+      });
+    });
+
+    if (submitRating) {
+      submitRating.addEventListener('click', () => {
+        submitRating.innerText = 'Submitting Feedback...';
+        setTimeout(() => {
+          submitRating.innerText = 'Submit Anonymous Feedback';
+          ratingModal?.classList.add('hidden');
+          showToast(`Rating of ${currentRating}★ submitted! Thank you.`, 'thumb_up', 'bg-primary', 'text-on-primary');
+        }, 500);
+      });
+    }
+
+    // 10. Secondary Action Buttons
+    const shareMenuBtn = document.getElementById('shareMenuBtn');
+    if (shareMenuBtn) {
+      shareMenuBtn.addEventListener('click', () => {
+        if (navigator.share) {
+          navigator.share({ title: 'Mess Menu Today', text: 'Lunch: Paneer Butter Masala & Chicken Curry!' }).catch(() => {});
+        } else {
+          navigator.clipboard?.writeText?.(window.location.href);
+          showToast('Menu link copied to clipboard!', 'content_copy');
+        }
+      });
+    }
+
+    const fullWeeklyMenuBtn = document.getElementById('fullWeeklyMenuBtn');
+    if (fullWeeklyMenuBtn) {
+      fullWeeklyMenuBtn.addEventListener('click', () => {
+        window.location.href = 'dining-menu-ratings.html';
+      });
+    }
+
+    const menuPollCard = document.getElementById('menuPollCard');
+    const voteCountDisplay = document.getElementById('voteCountDisplay');
+    let hasVoted = false;
+    if (menuPollCard) {
+      menuPollCard.addEventListener('click', () => {
+        if (!hasVoted) {
+          hasVoted = true;
+          if (voteCountDisplay) voteCountDisplay.innerText = '1,249 votes cast (You voted)';
+          showToast('Vote recorded for Biryani! 🎉', 'how_to_vote', 'bg-tertiary', 'text-on-tertiary');
+        } else {
+          showToast('You already voted in this poll.', 'info');
+        }
+      });
+    }
+
+    const complaintBtn = document.getElementById('complaintBtn');
+    if (complaintBtn) {
+      complaintBtn.addEventListener('click', () => {
+        showToast('Complaint ticket window opened', 'campaign');
+      });
+    }
+
+    const suggestDishBtn = document.getElementById('suggestDishBtn');
+    if (suggestDishBtn) {
+      suggestDishBtn.addEventListener('click', () => {
+        showToast('Dish Suggestion box opened for next cycle', 'tips_and_updates');
+      });
+    }
+
+    const lunchAlert = document.getElementById('lunchAlertBanner');
+    if (lunchAlert) {
+      lunchAlert.addEventListener('click', () => {
+        window.location.href = 'dining-menu-ratings.html';
+      });
+    }
+
+    // 11. Bottom Navigation Tabs Handling
+    const navTabs = document.querySelectorAll('.nav-tab');
+    navTabs.forEach(tab => {
+      tab.addEventListener('click', (e) => {
+        e.preventDefault();
+        const path = tab.getAttribute('data-path');
+        if (path === 'dashboard') {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else if (path === 'live-queue') {
+          window.location.href = 'live-queue-ticket.html';
+        } else if (path === 'dining-menu') {
+          window.location.href = 'dining-menu-ratings.html';
+        } else if (path === 'feedback-and-vote') {
+          window.location.href = 'dining-menu-ratings.html';
+        } else if (path === 'profile-settings') {
+          toggleQr(true);
+        }
+      });
+    });
+
+    // Initial binding for dishes
+    attachDishClickHandlers();
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../js/supabase.js"></script>
+<script src="../js/smartmess-nav.js"></script>
+</body></html>

@@ -1,0 +1,55 @@
+:root {
+  /* Smart Campus Mess Design System Tokens */
+  --color-primary: #00685f;
+  --color-primary-container: #008378;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #f4fffc;
+  --color-primary-fixed: #89f5e7;
+  --color-primary-fixed-dim: #6bd8cb;
+
+  --color-secondary: #006c4a;
+  --color-secondary-container: #82f5c1;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-container: #00714e;
+  --color-secondary-fixed: #85f8c4;
+  --color-secondary-fixed-dim: #68dba9;
+
+  --color-tertiary: #825100;
+  --color-tertiary-container: #a36700;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-container: #fffbff;
+  --color-tertiary-fixed: #ffddb8;
+  --color-tertiary-fixed-dim: #ffb95f;
+
+  --color-surface: #faf8ff;
+  --color-surface-dim: #d2d9f4;
+  --color-surface-bright: #faf8ff;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f2f3ff;
+  --color-surface-container: #eaedff;
+  --color-surface-container-high: #e2e7ff;
+  --color-surface-container-highest: #dae2fd;
+  --color-on-surface: #131b2e;
+  --color-on-surface-variant: #3d4947;
+  --color-outline: #6d7a77;
+  --color-outline-variant: #bcc9c6;
+
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+
+  /* Crowd Status Engine */
+  --status-low-text: #059669;
+  --status-low-bg: #ecfdf5;
+  --status-low-border: #a7f3d0;
+
+  --status-mod-text: #d97706;
+  --status-mod-bg: #fffbeb;
+  --status-mod-border: #fde68a;
+
+  --status-peak-text: #dc2626;
+  --status-peak-bg: #fef2f2;
+  --status-peak-border: #fecaca;
+
+  /* Typography */
+  --font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
