@@ -38,8 +38,8 @@ By giving students real-time queue information and giving administrators better 
 
 We plan to add features such as AI-based crowd prediction, peak-hour analysis, digital tokens, queue notifications, and food demand prediction.
 
-## Team AALU
+## Team 
 
-**Team 404NOTFOUND**
+**Team AALU**
 
 Built as a hackathon project to solve a real problem faced by students every day.
